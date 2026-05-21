@@ -341,21 +341,21 @@
 
             <div
                 class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-200/60 text-left shadow-sm max-w-2xl mx-auto">
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message envoyé avec succès !');">
+                <form action="https://formspree.io/f/xkoervqp" method="POST" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
-                        <input type="text" placeholder="Prénom"
+                        <input type="text" name="Prénom" placeholder="Prénom"
                             class="p-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600">
-                        <input type="text" placeholder="Nom"
+                        <input type="text" name="nom" placeholder="Nom"
                             class="p-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600">
                     </div>
-                    <input type="email" placeholder="Email"
+                    <input type="email" name="email" placeholder="Email"
                         class="w-full p-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600">
-                    <input type="tel" placeholder="Téléphone"
+                    <input type="tel" name="telephone" placeholder="Téléphone"
                         class="w-full p-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600">
                     <div class="grid grid-cols-2 gap-4">
-                        <input type="text" placeholder="Métier"
+                        <input type="text" name="metier" placeholder="Métier"
                             class="p-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600">
-                        <input type="text" placeholder="Entreprise"
+                        <input type="text" name="entreprise" placeholder="Entreprise"
                             class="p-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-600">
                     </div>
                     <button type="submit"
