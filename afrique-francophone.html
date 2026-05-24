@@ -6,76 +6,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afrique Francophone - HC Santé & Gouvernance</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans">
+<body class="bg-white text-slate-800 antialiased flex flex-col min-h-screen">
 
-    <header class="bg-gradient-to-r from-emerald-900 to-slate-900 text-white py-16 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl font-extrabold mb-4">Afrique Francophone</h1>
-            <p class="text-xl text-emerald-200">Des systèmes sanitaires et sociaux en pleine évolution.</p>
+    <nav class="bg-slate-950 text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="h-12 w-auto object-contain">
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-slate-300 hover:text-white font-medium">Accueil</a>
+                <a href="interventions.html" class="text-slate-300 hover:text-white font-medium">Interventions</a>
+                <a href="afrique-francophone.html" class="text-blue-400 font-semibold">Afrique Francophone</a>
+                <a href="publications.html" class="text-slate-300 hover:text-white font-medium">Publications</a>
+                <a href="index.html#contacte"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold transition-colors">Prendre
+                    contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-2">Afrique francophone</h1>
+            <p class="text-blue-400 text-lg">Des systèmes sanitaires et sociaux en pleine évolution</p>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
 
-        <section class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <p class="text-lg leading-relaxed mb-6 text-slate-700">
+        <section class="space-y-4">
+            <p class="text-slate-700 text-lg leading-relaxed">
                 L’Afrique francophone connaît aujourd’hui des transformations majeures dans les domaines de la santé, de
                 la protection sociale et du médico-social.
             </p>
-            <div class="bg-slate-50 p-6 rounded-lg border-l-4 border-blue-600">
-                <h3 class="font-bold mb-3 text-slate-900">Les enjeux liés aux réformes :</h3>
-                <ul class="grid md:grid-cols-2 gap-2 text-slate-600 list-inside list-disc">
-                    <li>Couverture maladie universelle</li>
-                    <li>Accès aux soins</li>
-                    <li>Prise en charge du handicap</li>
-                    <li>Gouvernance des organisations</li>
-                    <li>Professionnalisation des acteurs</li>
-                    <li>Structuration médico-sociale</li>
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <p class="font-medium text-slate-900 mb-4">Les enjeux liés :</p>
+                <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-600 list-inside list-disc">
+                    <li>à la couverture maladie universelle ;</li>
+                    <li>à l’accès aux soins ;</li>
+                    <li>au handicap ;</li>
+                    <li>à la gouvernance des organisations ;</li>
+                    <li>à la professionnalisation des acteurs ;</li>
+                    <li>et à la structuration des dispositifs sociaux et médico-sociaux,</li>
                 </ul>
-                <p class="mt-4 text-sm text-slate-500 font-medium">Ces enjeux occupent désormais une place centrale dans
-                    les politiques publiques et les dynamiques de réforme institutionnelle.</p>
+                <p class="mt-4 text-slate-700 text-sm">occupent désormais une place centrale dans les politiques
+                    publiques et les dynamiques de réforme institutionnelle.</p>
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-8 items-center">
+        <section class="border-t border-slate-100 pt-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Des défis structurels majeurs</h2>
+            <p class="text-slate-600 mb-6">Les États et institutions font face à plusieurs enjeux stratégiques :</p>
+            <div class="grid sm:grid-cols-2 gap-3 text-sm text-slate-700 font-medium">
+                <div class="p-3 bg-slate-50 rounded-lg">renforcement de la gouvernance sanitaire ;</div>
+                <div class="p-3 bg-slate-50 rounded-lg">amélioration de la qualité des services ;</div>
+                <div class="p-3 bg-slate-50 rounded-lg">structuration des parcours de prise en charge ;</div>
+                <div class="p-3 bg-slate-50 rounded-lg">coordination des acteurs ;</div>
+                <div class="p-3 bg-slate-50 rounded-lg">développement des compétences ;</div>
+                <div class="p-3 bg-slate-50 rounded-lg">modernisation des organisations ;</div>
+                <div class="p-3 bg-slate-50 rounded-lg">inclusion des populations vulnérables ;</div>
+                <div class="p-3 bg-slate-50 rounded-lg">renforcement des dispositifs de solidarité et de protection
+                    sociale.</div>
+            </div>
+            <p class="mt-6 text-slate-600 text-sm italic">
+                Ces évolutions nécessitent des approches adaptées aux réalités locales, fondées sur la coopération, la
+                professionnalisation et le renforcement durable des capacités.
+            </p>
+        </section>
+
+        <section class="border-t border-slate-100 pt-8 grid md:grid-cols-2 gap-8">
             <div>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">Des défis structurels majeurs</h2>
-                <p class="text-slate-600 mb-4">Les États et institutions font face à plusieurs enjeux stratégiques
-                    majeurs pour l'avenir des populations.</p>
-                <p class="text-slate-600">Ces évolutions nécessitent des approches adaptées aux réalités locales,
-                    fondées sur la coopération, la professionnalisation et le renforcement durable des capacités.</p>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Une expertise adaptée aux réalités africaines</h2>
+                <p class="text-sm text-slate-600 mb-4">HC Santé & Gouvernance développe une approche institutionnelle et
+                    opérationnelle fondée sur :</p>
+                <ul class="space-y-2 text-sm text-slate-700 list-inside list-square">
+                    <li>l’écoute des besoins ;</li>
+                    <li>la compréhension des contextes locaux ;</li>
+                    <li>l’accompagnement des dynamiques de réforme ;</li>
+                    <li>le transfert durable de compétences ;</li>
+                    <li>et la structuration progressive des organisations et dispositifs.</li>
+                </ul>
+                <p class="mt-4 text-sm text-slate-600">Notre ambition est d’accompagner les institutions et
+                    organisations engagées dans la construction de systèmes sanitaires et sociaux plus inclusifs, plus
+                    performants et plus durables.</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-2 text-sm">
-                <div class="p-2 bg-red-50 text-red-800 rounded">Renforcement de la gouvernance sanitaire</div>
-                <div class="p-2 bg-red-50 text-red-800 rounded">Amélioration de la qualité des services</div>
-                <div class="p-2 bg-red-50 text-red-800 rounded">Structuration des parcours de soin</div>
-                <div class="p-2 bg-red-50 text-red-800 rounded">Coordination des acteurs & Modernisation</div>
-                <div class="p-2 bg-red-50 text-red-800 rounded">Inclusion des populations vulnérables</div>
+
+            <div class="bg-blue-950 text-white p-6 rounded-2xl">
+                <h2 class="text-xl font-bold mb-4">Une approche de coopération et de partenariat</h2>
+                <p class="text-xs text-slate-300 mb-4">HC Santé & Gouvernance privilégie une logique de partenariat avec
+                    :</p>
+                <p class="text-sm font-semibold tracking-wide text-blue-400 uppercase mb-4">
+                    les ministères ; les établissements sanitaires ; les structures médico-sociales ; les agences et
+                    directions techniques ; les collectivités ; les organisations internationales ; et les partenaires
+                    techniques et financiers.
+                </p>
+                <p class="text-xs text-slate-300">Chaque intervention vise à renforcer durablement les capacités locales
+                    et à soutenir les dynamiques nationales de structuration et de gouvernance.</p>
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-xl border border-slate-100">
-                <h3 class="text-lg font-bold mb-4 text-emerald-800">Une expertise adaptée aux réalités africaines</h3>
-                <ul class="space-y-2 text-slate-600 list-disc pl-4">
-                    <li>L’écoute active des besoins</li>
-                    <li>Compréhension fine des contextes locaux</li>
-                    <li>Accompagnement des dynamiques de réforme</li>
-                    <li>Transfert durable de compétences</li>
-                    <li>Gouvernance et structuration progressive</li>
-                </ul>
+        <section class="border-t border-slate-100 pt-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Domaines prioritaires d’intervention</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="font-bold text-slate-900 mb-2">Gouvernance sanitaire & médico-sociale</p>
+                    <p class="text-slate-500">Structuration des organisations, Appui institutionnel, Pilotage
+                        stratégique, Accompagnement du changement.</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="font-bold text-slate-900 mb-2">Couverture maladie universelle & protection sociale</p>
+                    <p class="text-slate-500">Organisation des dispositifs, Coordination des parcours, Renforcement des
+                        capacités, Accès aux soins et inclusion.</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="font-bold text-slate-900 mb-2">Handicap et inclusion</p>
+                    <p class="text-slate-500">Structuration des politiques handicap, Inclusion sociale et
+                        médico-sociale, Professionnalisation des acteurs, Développement des dispositifs
+                        d’accompagnement.</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <p class="font-bold text-slate-900 mb-2">Formation et professionnalisation</p>
+                    <p class="text-slate-500">Leadership et management, Gouvernance des organisations, Culture qualité
+                        et performance, Renforcement durable des compétences.</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-100">
-                <h3 class="text-lg font-bold mb-4 text-blue-800">Une approche de coopération</h3>
-                <p class="text-sm text-slate-600 mb-3">Nous travaillons en étroite logique de partenariat avec :</p>
-                <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Ministères • Établissements
-                    sanitaires • Structures médico-sociales • Collectivités • Organisations internationales</p>
-            </div>
+        </section>
+
+        <section class="bg-slate-900 text-white p-8 rounded-3xl text-center">
+            <h2 class="text-xl font-bold mb-2">Une vision tournée vers l’impact durable</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto mb-4">HC Santé & Gouvernance contribue au développement de
+                systèmes sanitaires et sociaux mieux structurés, plus accessibles, plus inclusifs, plus performants et
+                centrés sur les besoins des populations.</p>
+            <p class="text-blue-400 font-medium text-xs uppercase tracking-wider">
+                Le développement durable des systèmes sanitaires et sociaux passe par la gouvernance, la
+                professionnalisation et le renforcement des capacités locales.
+            </p>
         </section>
 
     </main>
+
+    <footer class="bg-slate-950 text-slate-600 text-xs py-6 text-center mt-auto">
+        &copy; 2026 HC Santé & Gouvernance. Tous droits réservés.
+    </footer>
+
 </body>
 
 </html>

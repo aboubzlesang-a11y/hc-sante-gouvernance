@@ -6,77 +6,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights & Publications - HC Santé & Gouvernance</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans">
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
-    <header class="bg-slate-900 text-white py-16 px-4 border-b border-slate-800">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl font-extrabold mb-4">Insights & Publications</h1>
-            <p class="text-lg text-slate-400">Analyses, réflexions et perspectives sur les enjeux sanitaires et
-                médico-sociaux en Afrique francophone.</p>
+    <nav class="bg-slate-950 text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="h-12 w-auto object-contain">
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-slate-300 hover:text-white font-medium">Accueil</a>
+                <a href="interventions.html" class="text-slate-300 hover:text-white font-medium">Interventions</a>
+                <a href="afrique-francophone.html" class="text-slate-300 hover:text-white font-medium">Afrique
+                    Francophone</a>
+                <a href="publications.html" class="text-blue-400 font-semibold">Publications</a>
+                <a href="index.html#contacte"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold transition-colors">Prendre
+                    contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-3">Insights & Publications</h1>
+            <p class="text-slate-400 text-lg">Analyses, réflexions et perspectives sur les enjeux sanitaires et
+                médico-sociaux en Afrique francophone</p>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-12 grid lg:grid-cols-3 gap-8">
+    <section class="max-w-5xl mx-auto px-6 py-10">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/60 text-sm text-slate-600 space-y-3">
+            <p>HC Santé & Gouvernance développe une approche fondée sur la réflexion stratégique, l’analyse des
+                politiques publiques et le partage d’expertise autour des transformations sanitaires, sociales et
+                médico-sociales.</p>
+            <p>Cette rubrique a vocation à contribuer aux débats, à nourrir les dynamiques de réforme et à accompagner
+                les acteurs institutionnels dans leurs réflexions stratégiques.</p>
+        </div>
+    </section>
 
-        <div class="lg:col-span-2 space-y-12">
+    <main class="max-w-5xl mx-auto px-6 pb-24 grid md:grid-cols-3 gap-8">
 
-            <article class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-                <span
-                    class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-2.5 py-1 rounded">Analyse
-                    stratégique</span>
-                <h2 class="text-2xl font-bold text-slate-900 mt-3 mb-4">Gouvernance sanitaire en Afrique francophone :
-                    enjeux et perspectives</h2>
-                <p class="text-slate-600 mb-4">Le renforcement de la gouvernance constitue aujourd’hui un levier majeur
-                    d’amélioration des systèmes sanitaires en Afrique francophone...</p>
-                <div class="border-t pt-4 mt-4 text-xs text-slate-500 flex gap-2"><strong>Thématiques :</strong>
-                    Gouvernance • Pilotage • Conduite du changement</div>
-                <a href="#" class="inline-block mt-4 text-blue-600 font-semibold text-sm hover:underline">Lire l’analyse
-                    complète →</a>
+        <div class="md:col-span-2 space-y-8">
+            <h2 class="text-xl font-bold text-slate-900 border-b pb-2">Publications récentes</h2>
+
+            <article class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-xs">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Analyse stratégique</span>
+                <h3 class="text-lg font-bold text-slate-900 mt-2 mb-3">Gouvernance sanitaire en Afrique francophone :
+                    enjeux et perspectives</h3>
+                <p class="text-xs text-slate-600 mb-4">Le renforcement de la gouvernance constitue aujourd’hui un levier
+                    majeur d’amélioration des systèmes sanitaires en Afrique francophone. Face aux enjeux de
+                    coordination, de professionnalisation et d’efficacité organisationnelle, les institutions sont
+                    appelées à développer des approches plus structurées, plus collaboratives et davantage orientées
+                    vers la qualité des services et la performance des dispositifs.</p>
+                <div class="bg-slate-50 p-3 rounded-xl text-xs mb-4">
+                    <span class="font-bold text-slate-700">Thématiques abordées :</span> Gouvernance des organisations
+                    sanitaires, Pilotage stratégique, Renforcement des capacités, Structuration institutionnelle,
+                    Conduite du changement.
+                </div>
+                <a href="#" class="text-xs font-bold text-blue-600 hover:underline">Lire l’analyse complète &rarr;</a>
             </article>
 
-            <article class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-                <span
-                    class="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded">Réflexion
+            <article class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-xs">
+                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Réflexion
                     institutionnelle</span>
-                <h2 class="text-2xl font-bold text-slate-900 mt-3 mb-4">Couverture maladie universelle : défis
-                    organisationnels et enjeux de structuration</h2>
-                <p class="text-slate-600 mb-4">La mise en œuvre de la couverture maladie universelle représente un enjeu
-                    stratégique majeur pour les États engagés dans le développement de systèmes de protection sociale...
-                </p>
-                <div class="border-t pt-4 mt-4 text-xs text-slate-500 flex gap-2"><strong>Thématiques :</strong>
-                    Protection sociale • Coordination • Inclusion</div>
-                <a href="#" class="inline-block mt-4 text-blue-600 font-semibold text-sm hover:underline">Lire l’analyse
-                    complète →</a>
+                <h3 class="text-lg font-bold text-slate-900 mt-2 mb-3">Couverture maladie universelle : défis
+                    organisationnels et enjeux de structuration</h3>
+                <p class="text-xs text-slate-600 mb-4">La mise en œuvre de la couverture maladie universelle représente
+                    un enjeu stratégique majeur pour les États engagés dans le développement de systèmes de protection
+                    sociale plus inclusifs. Au-delà du financement, les défis concernent également : l’organisation des
+                    dispositifs ; la coordination des acteurs ; les parcours de prise en charge ; et la
+                    professionnalisation des structures.</p>
+                <div class="bg-slate-50 p-3 rounded-xl text-xs mb-4">
+                    <span class="font-bold text-slate-700">Thématiques abordées :</span> Protection sociale,
+                    Coordination sanitaire et sociale, Gouvernance des dispositifs, Inclusion et accès aux soins.
+                </div>
+                <a href="#" class="text-xs font-bold text-blue-600 hover:underline">Lire l’analyse complète &rarr;</a>
             </article>
 
-            <article class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-                <span
-                    class="text-xs font-bold uppercase tracking-widest text-purple-600 bg-purple-50 px-2.5 py-1 rounded">Perspective
+            <article class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-xs">
+                <span class="text-xs font-bold text-purple-600 uppercase tracking-wider">Perspective
                     médico-sociale</span>
-                <h2 class="text-2xl font-bold text-slate-900 mt-3 mb-4">Handicap et inclusion : vers une structuration
-                    durable des dispositifs d’accompagnement</h2>
-                <p class="text-slate-600 mb-4">Les politiques du handicap nécessitent une approche globale associant
-                    gouvernance, inclusion, coordination des acteurs et professionnalisation des dispositifs
-                    d’accompagnement...</p>
-                <a href="#" class="inline-block mt-4 text-blue-600 font-semibold text-sm hover:underline">Lire l’analyse
-                    complète →</a>
+                <h3 class="text-lg font-bold text-slate-900 mt-2 mb-3">Handicap et inclusion : vers une structuration
+                    durable des dispositifs d’accompagnement</h3>
+                <p class="text-xs text-slate-600 mb-4">Les politiques du handicap nécessitent une approche globale
+                    associant gouvernance, inclusion, coordination des acteurs et professionnalisation des dispositifs
+                    d’accompagnement. L’amélioration des parcours des personnes en situation de handicap repose sur une
+                    structuration progressive des organisations et une meilleure articulation entre les secteurs
+                    sanitaires, sociaux et médico-sociaux.</p>
+                <div class="bg-slate-50 p-3 rounded-xl text-xs mb-4">
+                    <span class="font-bold text-slate-700">Thématiques abordées :</span> Inclusion sociale,
+                    Structuration médico-sociale, Professionnalisation des acteurs, Coordination des dispositifs,
+                    Gouvernance territoriale.
+                </div>
+                <a href="#" class="text-xs font-bold text-blue-600 hover:underline">Lire l’analyse complète &rarr;</a>
+            </article>
+
+            <article class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-xs">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Leadership & management</span>
+                <h3 class="text-lg font-bold text-slate-900 mt-2 mb-3">Professionnalisation des cadres : un enjeu
+                    stratégique pour les systèmes sanitaires et sociaux</h3>
+                <p class="text-xs text-slate-600 mb-4">Le développement durable des systèmes sanitaires et
+                    médico-sociaux repose largement sur la qualité du management, du pilotage stratégique et de la
+                    gouvernance des organisations. La professionnalisation des cadres constitue ainsi un levier
+                    essentiel de modernisation, d’amélioration continue et de performance institutionnelle.</p>
+                <div class="bg-slate-50 p-3 rounded-xl text-xs mb-4">
+                    <span class="font-bold text-slate-700">Thématiques abordées :</span> Leadership, Management,
+                    Gouvernance, Culture qualité, Développement des compétences.
+                </div>
+                <a href="#" class="text-xs font-bold text-blue-600 hover:underline">Lire l’analyse complète &rarr;</a>
             </article>
         </div>
 
-        <div class="space-y-8">
-            <div class="bg-white p-6 rounded-xl border border-slate-100">
-                <h3 class="font-bold text-slate-900 mb-4 border-b pb-2">Prochaines publications</h3>
-                <ul class="space-y-3 text-sm text-slate-600 list-inside list-square">
-                    <li>Gouvernance et financement du système</li>
-                    <li>Structuration du médico-social</li>
-                    <li>Coordination des parcours de soin</li>
-                    <li>Leadership et management hospitalier</li>
+        <div class="space-y-6">
+            <div class="bg-slate-900 text-white p-6 rounded-2xl">
+                <h3 class="font-bold mb-3 border-b border-slate-800 pb-2 text-sm">Réflexion stratégique</h3>
+                <p class="text-xs text-slate-400 mb-4">À travers ses publications, HC Santé & Gouvernance souhaite
+                    partager des analyses, valoriser les réformes, contribuer aux réflexions et promouvoir une approche
+                    durable.</p>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-2">Thématiques
+                    d’expertise</span>
+                <div class="flex flex-wrap gap-1.5 text-[10px]">
+                    <span class="bg-slate-800 px-2 py-0.5 rounded">Gouvernance sanitaire</span>
+                    <span class="bg-slate-800 px-2 py-0.5 rounded">Médico-social</span>
+                    <span class="bg-slate-800 px-2 py-0.5 rounded">CMU</span>
+                    <span class="bg-slate-800 px-2 py-0.5 rounded">Handicap</span>
+                    <span class="bg-slate-800 px-2 py-0.5 rounded">Formation des cadres</span>
+                    <span class="bg-slate-800 px-2 py-0.5 rounded">Qualité</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-xs">
+                <h3 class="font-bold text-slate-900 mb-3 border-b pb-2 text-sm">Prochaines publications</h3>
+                <ul class="space-y-2 text-xs text-slate-600 list-disc list-inside">
+                    <li>Gouvernance et financement des systèmes de santé</li>
+                    <li>Structuration du médico-social en Afrique francophone</li>
+                    <li>Coordination des parcours de prise en charge</li>
+                    <li>Inclusion et politiques publiques du handicap</li>
+                    <li>Leadership et modernisation des organisations sanitaires</li>
                 </ul>
             </div>
         </div>
     </main>
+
+    <footer class="bg-slate-950 text-slate-600 text-xs py-6 text-center mt-auto">
+        &copy; 2026 HC Santé & Gouvernance. Tous droits réservés.
+    </footer>
+
 </body>
 
 </html>
