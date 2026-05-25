@@ -26,43 +26,55 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col pt-20">
 
-    <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
+    <nav class="fixed top-0 w-full z-50 bg-slate-950/90 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition">
-                <img src="logo.png.png" alt="Logo HC" class="h-16 w-auto object-contain">
+                <img src="logo.png.png" alt="Logo HC" class="h-10 w-auto object-contain">
                 <span class="text-xl font-extrabold tracking-tight hidden sm:inline">Santé & Gouvernance</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none text-2xl p-2 cursor-pointer"
+                aria-label="Ouvrir le menu">
+                <i class="fa-solid fa-bars" id="burger-icon"></i>
+            </button>
+
+            <div id="nav-links"
+                class="hidden absolute top-full left-0 w-full bg-slate-950/95 border-b border-white/10 p-6 flex flex-col space-y-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 text-sm font-medium text-slate-300">
+
                 <div class="relative group">
-                    <button class="text-white font-semibold transition flex items-center gap-1.5 py-2 cursor-pointer">
-                        Le Cabinet <i
-                            class="fa-solid fa-chevron-down text-xs opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+                    <button id="dropdown-btn"
+                        class="text-white font-semibold transition flex items-center justify-between w-full md:w-auto gap-1.5 py-2 cursor-pointer">
+                        Le Cabinet
+                        <i class="fa-solid fa-chevron-down text-xs opacity-60 transition-transform duration-200"
+                            id="arrow-icon"></i>
                     </button>
-                    <div
-                        class="absolute left-0 mt-1 w-56 bg-slate-900 border border-white/10 rounded-xl shadow-2xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 p-2 text-left">
+
+                    <div id="dropdown-menu"
+                        class="hidden md:absolute md:block md:opacity-0 md:pointer-events-none group-hover:md:opacity-100 group-hover:md:pointer-events-auto left-0 mt-1 w-full md:w-56 bg-slate-900/80 md:bg-slate-900 border border-white/5 md:border-white/10 rounded-xl shadow-2xl transition-all duration-200 p-2 text-left pl-4 md:pl-2 space-y-1">
                         <a href="index.html#propos"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">À
+                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">À
                             propos</a>
                         <a href="index.html#expertises"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Pôle
+                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Pôle
                             d'Expertise</a>
                         <a href="index.html#approche"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Notre
+                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Notre
                             Approche</a>
                         <a href="index.html#publics"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publics</a>
-                        <div class="border-t border-white/10 my-1"></div>
+                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publics</a>
+                        <div class="border-t border-white/10 my-1 hidden md:block"></div>
                         <a href="interventions.html"
                             class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Interventions</a>
                         <a href="afrique-francophone.html"
-                            class="block px-4 py-2 text-white bg-white/5 rounded-lg transition font-medium">Afrique
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Afrique
                             Francophone</a>
                         <a href="publications.html"
                             class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Publications</a>
                     </div>
                 </div>
+
                 <a href="index.html#contact"
-                    class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition">Contact</a>
+                    class="mobile-link bg-blue-600 text-white text-center px-5 py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition block md:inline-block">Contact</a>
             </div>
         </div>
     </nav>
@@ -245,6 +257,44 @@
             <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
         </div>
     </footer>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const burgerIcon = document.getElementById('burger-icon');
+        const navLinks = document.getElementById('nav-links');
+        const dropdownBtn = document.getElementById('dropdown-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const arrowIcon = document.getElementById('arrow-icon');
+
+        // 1. Gestion de l'ouverture/fermeture du menu Burger global
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = navLinks.classList.contains('hidden');
+            if (isHidden) {
+                navLinks.classList.remove('hidden');
+                burgerIcon.classList.remove('fa-bars');
+                burgerIcon.classList.add('fa-xmark'); // Transforme le burger en "X"
+            } else {
+                navLinks.classList.add('hidden');
+                burgerIcon.classList.remove('fa-xmark');
+                burgerIcon.classList.add('fa-bars');
+            }
+        });
+
+        // 2. Gestion du clic sur "Le Cabinet" UNIQUEMENT sur mobile (< 768px)
+        dropdownBtn.addEventListener('click', (e) => {
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+                const isMenuHidden = dropdownMenu.classList.contains('hidden');
+
+                if (isMenuHidden) {
+                    dropdownMenu.classList.remove('hidden');
+                    arrowIcon.classList.add('rotate-180'); // Pivote la flèche
+                } else {
+                    dropdownMenu.classList.add('hidden');
+                    arrowIcon.classList.remove('rotate-180');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
