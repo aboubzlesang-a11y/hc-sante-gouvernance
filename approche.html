@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Approche | HC Santé & Gouvernance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 min-h-screen pt-24 overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition">
+                <img src="logo.png.png" alt="Logo HC" class="h-11 w-auto object-contain">
+                <span class="text-xl font-black tracking-tight hidden sm:inline">Santé & Gouvernance</span>
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none text-2xl p-2 cursor-pointer">
+                <i class="fa-solid fa-bars" id="burger-icon"></i>
+            </button>
+            <div id="nav-links"
+                class="hidden absolute top-full left-0 w-full bg-slate-950 border-b border-white/10 p-6 flex flex-col space-y-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 text-base font-bold text-slate-200">
+                <div class="relative group">
+                    <button id="dropdown-btn"
+                        class="text-white transition flex items-center justify-between w-full md:w-auto gap-1.5 py-2 cursor-pointer">
+                        Menu <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+                    </button>
+                    <div id="dropdown-menu"
+                        class="hidden md:absolute md:block md:opacity-0 md:pointer-events-none group-hover:md:opacity-100 group-hover:md:pointer-events-auto left-0 mt-1 w-full md:w-56 bg-slate-900 border border-white/10 rounded-xl shadow-2xl p-2 text-left space-y-1 z-50">
+                        <a href="apropos.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">À
+                            propos</a>
+                        <a href="expertises.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Pôles
+                            d'Expertise</a>
+                        <a href="approche.html"
+                            class="block px-4 py-2.5 text-white bg-blue-600/20 rounded-lg transition">Notre Approche</a>
+                        <a href="publics.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publics</a>
+                        <div class="border-t border-white/10 my-1 hidden md:block"></div>
+                        <a href="interventions.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Interventions</a>
+                        <a href="afrique-francophone.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Afrique
+                            Francophone</a>
+                        <a href="publications.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publications</a>
+                    </div>
+                </div>
+                <a href="index.html#contact"
+                    class="bg-blue-600 text-white text-center px-5 py-2.5 rounded-xl hover:bg-blue-700 transition block md:inline-block">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
+            <p class="uppercase tracking-widest text-xs font-bold text-blue-400">Méthodologie</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-4xl">
+                Notre Méthode : 5 Piliers d'Action Continus
+            </h1>
+            <p class="text-slate-300 text-base md:text-lg font-medium max-w-3xl leading-relaxed">
+                Une démarche sur-mesure, collaborative et structurée pour garantir la pérennité et la réussite des
+                transformations sectorielles.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-20">
+        <div
+            class="space-y-12 relative before:absolute before:top-0 before:bottom-0 before:left-6 sm:before:left-1/2 before:w-0.5 before:bg-slate-200">
+
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+                <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 01</span>
+                    <h3 class="text-lg font-extrabold text-slate-900">Immersion & Diagnostic Local</h3>
+                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Analyse minutieuse de l'existant,
+                        écoute des parties prenantes et décryptage des réalités du terrain.</p>
+                </div>
+                <div class="hidden sm:block sm:w-[45%]"></div>
+            </div>
+
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-left">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+                <div class="hidden sm:block sm:w-[45%]"></div>
+                <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 02</span>
+                    <h3 class="text-lg font-extrabold text-slate-900">Co-conception Stratégique</h3>
+                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Élaboration conjointe des feuilles
+                        de route et des solutions réglementaires ou organisationnelles.</p>
+                </div>
+            </div>
+
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+                <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 03</span>
+                    <h3 class="text-lg font-extrabold text-slate-900">Appui Opérationnel Rapproché</h3>
+                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Assistance technique de proximité
+                        auprès des directions et équipes projets pour sécuriser le déploiement.</p>
+                </div>
+                <div class="hidden sm:block sm:w-[45%]"></div>
+            </div>
+
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-left">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+                <div class="hidden sm:block sm:w-[45%]"></div>
+                <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 04</span>
+                    <h3 class="text-lg font-extrabold text-slate-900">Transfert de Compétences</h3>
+                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Formations ciblées et encadrement
+                        managérial pour autonomiser durablement les cadres locaux.</p>
+                </div>
+            </div>
+
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+                <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 05</span>
+                    <h3 class="text-lg font-extrabold text-slate-900">Évaluation & Amélioration Continue</h3>
+                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Mesure fine des impacts et mise en
+                        place d'une culture de la performance pour pérenniser les réformes.</p>
+                </div>
+                <div class="hidden sm:block sm:w-[45%]"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
+        <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const burgerIcon = document.getElementById('burger-icon');
+        const navLinks = document.getElementById('nav-links');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            burgerIcon.classList.toggle('fa-bars');
+            burgerIcon.classList.toggle('fa-xmark');
+        });
+    </script>
+</body>
+
+</html>

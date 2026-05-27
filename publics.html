@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publics Visés | HC Santé & Gouvernance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 min-h-screen pt-20 overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 bg-slate-950/90 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition">
+                <img src="logo.png.png" alt="Logo HC" class="h-11 w-auto object-contain">
+                <span class="text-xl font-black tracking-tight hidden sm:inline">Santé & Gouvernance</span>
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none text-2xl p-2 cursor-pointer">
+                <i class="fa-solid fa-bars" id="burger-icon"></i>
+            </button>
+
+            <div id="nav-links"
+                class="hidden absolute top-full left-0 w-full bg-slate-950 border-b border-white/10 p-6 flex flex-col space-y-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 text-base font-semibold text-slate-200">
+                <div class="relative group">
+                    <button id="dropdown-btn"
+                        class="text-white transition flex items-center justify-between w-full md:w-auto gap-1.5 py-2 cursor-pointer">
+                        Menu <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+                    </button>
+                    <div id="dropdown-menu"
+                        class="hidden md:absolute md:block md:opacity-0 md:pointer-events-none group-hover:md:opacity-100 group-hover:md:pointer-events-auto left-0 mt-1 w-full md:w-56 bg-slate-900 border border-white/10 rounded-xl shadow-2xl p-2 text-left space-y-1 z-50">
+                        <a href="apropos.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">À
+                            propos</a>
+                        <a href="expertises.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Pôles
+                            d'Expertise</a>
+                        <a href="approche.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Notre
+                            Approche</a>
+                        <a href="publics.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publics</a>
+                        <div class="border-t border-white/10 my-1 hidden md:block"></div>
+                        <a href="interventions.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Interventions</a>
+                        <a href="afrique-francophone.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Afrique
+                            Francophone</a>
+                        <a href="publications.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publications</a>
+                    </div>
+                </div>
+                <a href="index.html#contact"
+                    class="bg-blue-600 text-white text-center px-5 py-2.5 rounded-xl hover:bg-blue-700 transition block md:inline-block">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto" data-aos="fade-down" data-aos-duration="1000">
+            <p class="uppercase tracking-widest text-xs font-bold text-blue-400 mb-3">Écosystème</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">À quels acteurs s'adressent nos
+                conseils ?</h1>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-20 grid sm:grid-cols-2 gap-8 text-sm font-medium">
+
+        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+            data-aos-delay="100">
+            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
+                    class="fa-solid fa-landmark text-blue-600"></i> Ministères & Agences Publiques</h3>
+            <p class="text-slate-600 leading-relaxed font-medium">Appui aux directions stratégiques ministérielles, aux
+                secrétariats exécutifs de la CMU et aux agences gouvernementales de régulation de la santé.</p>
+        </div>
+
+        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+            data-aos-delay="200">
+            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
+                    class="fa-solid fa-hospital-user text-blue-600"></i> Établissements de Soins</h3>
+            <p class="text-slate-600 leading-relaxed font-medium">Centres hospitaliers, groupements hospitaliers
+                régionaux et structures de soins d'envergure, tant publiques que privées, recherchant une efficience
+                managériale.</p>
+        </div>
+
+        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+            data-aos-delay="300">
+            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
+                    class="fa-solid fa-users text-blue-600"></i> Établissements Médico-Sociaux</h3>
+            <p class="text-slate-600 leading-relaxed font-medium">Structures gestionnaires dédiées à l'inclusion,
+                centres d'hébergement pour enfants en rupture sociale ou personnes en situation de perte d’autonomie.
+            </p>
+        </div>
+
+        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+            data-aos-delay="400">
+            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
+                    class="fa-solid fa-handshake-angle text-blue-600"></i> Bailleurs & ONG Internationales</h3>
+            <p class="text-slate-600 leading-relaxed font-medium">Agences de coopération bilatérales, fondations privées
+                internationales et ONG de développement souhaitant sécuriser et évaluer l'impact de leurs
+                investissements.</p>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true });</script>
+</body>
+
+</html>

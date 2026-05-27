@@ -7,14 +7,14 @@
     <title>Afrique Francophone | HC Santé & Gouvernance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
         h1,
         h2,
         h3,
-        h4,
-        h5 {
+        h4 {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
@@ -24,275 +24,293 @@
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col pt-20">
+<body class="bg-slate-50 text-slate-900 min-h-screen pt-24 overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-50 bg-slate-950/90 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
+    <nav class="fixed top-0 w-full z-50 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition">
-                <img src="logo.png.png" alt="Logo HC" class="h-16 w-auto object-contain">
-                <span class="text-xl font-extrabold tracking-tight hidden sm:inline">Santé & Gouvernance</span>
+                <img src="logo.png.png" alt="Logo HC" class="h-11 w-auto object-contain">
+                <span class="text-xl font-black tracking-tight hidden sm:inline">Santé & Gouvernance</span>
             </a>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none text-2xl p-2 cursor-pointer"
-                aria-label="Ouvrir le menu">
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none text-2xl p-2 cursor-pointer">
                 <i class="fa-solid fa-bars" id="burger-icon"></i>
             </button>
 
             <div id="nav-links"
-                class="hidden absolute top-full left-0 w-full bg-slate-950/95 border-b border-white/10 p-6 flex flex-col space-y-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 text-sm font-medium text-slate-300">
-
+                class="hidden absolute top-full left-0 w-full bg-slate-950 border-b border-white/10 p-6 flex flex-col space-y-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 text-base font-bold text-slate-200">
                 <div class="relative group">
                     <button id="dropdown-btn"
-                        class="text-white font-semibold transition flex items-center justify-between w-full md:w-auto gap-1.5 py-2 cursor-pointer">
-                        Le Cabinet
-                        <i class="fa-solid fa-chevron-down text-xs opacity-60 transition-transform duration-200"
-                            id="arrow-icon"></i>
+                        class="text-white transition flex items-center justify-between w-full md:w-auto gap-1.5 py-2 cursor-pointer">
+                        Menu <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
                     </button>
-
                     <div id="dropdown-menu"
-                        class="hidden md:absolute md:block md:opacity-0 md:pointer-events-none group-hover:md:opacity-100 group-hover:md:pointer-events-auto left-0 mt-1 w-full md:w-56 bg-slate-900/80 md:bg-slate-900 border border-white/5 md:border-white/10 rounded-xl shadow-2xl transition-all duration-200 p-2 text-left pl-4 md:pl-2 space-y-1">
-                        <a href="index.html#propos"
-                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">À
+                        class="hidden md:absolute md:block md:opacity-0 md:pointer-events-none group-hover:md:opacity-100 group-hover:md:pointer-events-auto left-0 mt-1 w-full md:w-56 bg-slate-900 border border-white/10 rounded-xl shadow-2xl p-2 text-left space-y-1 z-50">
+                        <a href="apropos.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">À
                             propos</a>
-                        <a href="index.html#expertises"
-                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Pôle
+                        <a href="expertises.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Pôles
                             d'Expertise</a>
-                        <a href="index.html#approche"
-                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Notre
+                        <a href="approche.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Notre
                             Approche</a>
-                        <a href="index.html#publics"
-                            class="mobile-link block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publics</a>
+                        <a href="publics.html"
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publics</a>
                         <div class="border-t border-white/10 my-1 hidden md:block"></div>
                         <a href="interventions.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Interventions</a>
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Interventions</a>
                         <a href="afrique-francophone.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Afrique
+                            class="block px-4 py-2.5 text-white bg-blue-600/20 rounded-lg transition">Afrique
                             Francophone</a>
                         <a href="publications.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Publications</a>
+                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publications</a>
                     </div>
                 </div>
-
                 <a href="index.html#contact"
-                    class="mobile-link bg-blue-600 text-white text-center px-5 py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition block md:inline-block">Contact</a>
+                    class="bg-blue-600 text-white text-center px-5 py-2.5 rounded-xl hover:bg-blue-700 transition block md:inline-block">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header
-        class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-20 px-6 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-blue-500 blur-3xl"></div>
-        </div>
-        <div class="max-w-7xl mx-auto relative">
-            <p class="uppercase tracking-[0.25em] text-xs font-bold text-blue-400 mb-3">HC Santé & Gouvernance</p>
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Afrique francophone</h1>
-            <p class="text-slate-300 text-lg md:text-xl font-light max-w-3xl leading-relaxed">Des systèmes sanitaires et
-                sociaux en pleine évolution</p>
+    <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
+            <p class="uppercase tracking-widest text-xs font-bold text-blue-400">Ancrage Régional</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-4xl">
+                Afrique francophone : des systèmes sanitaires et sociaux en pleine évolution
+            </h1>
+            <p class="text-slate-300 text-base md:text-lg font-medium max-w-4xl leading-relaxed pt-2">
+                L’Afrique francophone connaît aujourd’hui des transformations majeures dans les domaines de la santé, de
+                la protection sociale et du médico-social.
+            </p>
         </div>
     </header>
 
-    <section class="bg-white border-b border-slate-200 py-16 px-6">
-        <div class="max-w-4xl mx-auto space-y-6 text-slate-700 text-base md:text-lg font-light leading-relaxed">
-            <p>L’Afrique francophone connaît aujourd’hui des transformations majeures dans les domaines de la santé, de
-                la protection sociale et du médico-social.</p>
+    <main class="max-w-7xl mx-auto px-6 py-20 space-y-16">
 
-            <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl text-slate-800 space-y-3 font-normal my-8">
-                <p class="text-xs uppercase tracking-wider font-bold text-blue-600">Les enjeux liés :</p>
-                <ul class="grid sm:grid-cols-2 gap-2 text-sm">
-                    <li class="flex items-center gap-2">&bull; À la couverture maladie universelle ;</li>
-                    <li class="flex items-center gap-2">&bull; À l’accès aux soins ;</li>
-                    <li class="flex items-center gap-2">&bull; Au handicap ;</li>
-                    <li class="flex items-center gap-2">&bull; À la gouvernance des organisations ;</li>
-                    <li class="flex items-center gap-2">&bull; À la professionnalisation des acteurs ;</li>
-                    <li class="flex items-center gap-2">&bull; À la structuration des dispositifs sociaux et
-                        médico-sociaux,</li>
-                </ul>
-            </div>
-
-            <p>occupent désormais une place centrale dans les politiques publiques et les dynamiques de réforme
-                institutionnelle.</p>
-        </div>
-    </section>
-
-    <main class="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-3 gap-12 flex-grow">
-
-        <div class="lg:col-span-2 space-y-12">
-
-            <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-6">
-                <h2 class="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-600"></span> Des défis structurels majeurs
-                </h2>
-                <p class="text-sm text-slate-500 font-medium">Les États et institutions font face à plusieurs enjeux
-                    stratégiques :</p>
-                <div class="grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Renforcement de la
-                        gouvernance sanitaire</div>
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Amélioration de la qualité
-                        des services</div>
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Structuration des parcours de
-                        prise en charge</div>
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Coordination des acteurs
-                    </div>
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Développement des compétences
-                    </div>
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Modernisation des
-                        organisations</div>
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Inclusion des populations
-                        vulnérables</div>
-                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl">&bull; Renforcement de la protection
-                        sociale</div>
-                </div>
-                <p class="text-sm text-slate-600 italic border-l-4 border-blue-600 pl-4 pt-2">Ces évolutions nécessitent
-                    des approches adaptées aux réalités locales, fondées sur la coopération, la professionnalisation et
-                    le renforcement durable des capacités.</p>
-            </section>
-
-            <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-6">
-                <h2 class="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-600"></span> Une expertise adaptée aux réalités africaines
-                </h2>
-                <p class="text-sm text-slate-600 font-light">HC Santé & Gouvernance développe une approche
-                    institutionnelle et opérationnelle fondée sur :</p>
-                <ul class="space-y-2 text-sm text-slate-700 pl-2">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-blue-600"></i>
-                        L’écoute des besoins ;</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-blue-600"></i> La
-                        compréhension des contextes locaux ;</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-blue-600"></i>
-                        L’accompagnement des dynamiques de réforme ;</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-blue-600"></i> Le
-                        transfert durable de compétences ;</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-blue-600"></i> Et
-                        la structuration progressive des organisations et dispositifs.</li>
-                </ul>
-                <p class="text-sm text-slate-800 font-medium bg-blue-50/50 p-4 rounded-xl border border-blue-100">Notre
-                    ambition est d’accompagner les institutions et organisations engagées dans la construction de
-                    systèmes sanitaires et sociaux plus inclusifs, plus performants et plus durables.</p>
-            </section>
-
-            <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-6">
-                <h2 class="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-600"></span> Une approche de coopération et de partenariat
-                </h2>
-                <p class="text-sm text-slate-600 font-light">HC Santé & Gouvernance privilégie une logique de
-                    partenariat robuste avec :</p>
-                <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
-                    <span class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">Ministères</span>
-                    <span class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">Établissements
-                        sanitaires</span>
-                    <span class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">Structures
-                        médico-sociales</span>
-                    <span class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">Agences & Directions
-                        techniques</span>
-                    <span class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">Collectivités</span>
-                    <span class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">Organisations
-                        internationales</span>
-                    <span class="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg">Partenaires techniques et
-                        financiers</span>
-                </div>
-                <p class="text-sm text-slate-600 font-light pt-2">Chaque intervention vise à renforcer durablement les
-                    capacités locales et à soutenir les dynamiques nationales de structuration et de gouvernance.</p>
-            </section>
-        </div>
-
-        <div class="space-y-8">
-
-            <div class="bg-slate-900 text-white p-6 rounded-[2rem] border border-slate-800 shadow-xl space-y-6">
-                <h3 class="text-lg font-bold tracking-tight uppercase text-xs tracking-wider text-blue-400">Domaines
-                    prioritaires d’intervention</h3>
-
-                <div class="space-y-4 text-xs font-light">
-                    <div>
-                        <h4 class="font-bold text-white text-sm mb-1.5">Gouvernance sanitaire et médico-sociale</h4>
-                        <p class="text-slate-400">&bull; Structuration des organisations / Appui institutionnel /
-                            Pilotage stratégique / Accompagnement du changement</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-3">
-                        <h4 class="font-bold text-white text-sm mb-1.5">Couverture maladie universelle & protection
-                            sociale</h4>
-                        <p class="text-slate-400">&bull; Organisation des dispositifs / Coordination des parcours /
-                            Renforcement des capacités / Accès aux soins et inclusion</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-3">
-                        <h4 class="font-bold text-white text-sm mb-1.5">Handicap et inclusion</h4>
-                        <p class="text-slate-400">&bull; Structuration des politiques handicap / Inclusion sociale et
-                            médico-sociale / Professionnalisation des acteurs / Dispositifs d’accompagnement</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-3">
-                        <h4 class="font-bold text-white text-sm mb-1.5">Formation et professionnalisation</h4>
-                        <p class="text-slate-400">&bull; Leadership et management / Gouvernance des organisations /
-                            Culture qualité et performance / Compétences durables</p>
-                    </div>
+        <section class="bg-white p-8 md:p-12 border border-slate-200 rounded-[2rem] shadow-xs space-y-6"
+            data-aos="fade-up">
+            <h2 class="text-2xl font-extrabold text-slate-900">Des enjeux au cœur des dynamiques de réforme</h2>
+            <p class="text-slate-700 font-semibold text-base leading-relaxed">
+                Les enjeux liés :
+            </p>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm font-bold text-slate-600">
+                <div class="flex items-center gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-100"><i
+                        class="fa-solid fa-shield-halved text-blue-600"></i> à la couverture maladie universelle</div>
+                <div class="flex items-center gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-100"><i
+                        class="fa-solid fa-clock-rotate-left text-blue-600"></i> à l’accès aux soins</div>
+                <div class="flex items-center gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-100"><i
+                        class="fa-solid fa-wheelchair text-blue-600"></i> au handicap</div>
+                <div class="flex items-center gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-100"><i
+                        class="fa-solid fa-sliders text-blue-600"></i> à la gouvernance des organisations</div>
+                <div class="flex items-center gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-100"><i
+                        class="fa-solid fa-user-check text-blue-600"></i> à la professionnalisation des acteurs</div>
+                <div class="flex items-center gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-100"><i
+                        class="fa-solid fa-diagram-project text-blue-600"></i> et à la structuration des dispositifs
                 </div>
             </div>
+            <p
+                class="text-slate-700 font-semibold text-base border-l-4 border-blue-600 pl-4 bg-blue-50/50 py-2 rounded-r-xl">
+                occupent désormais une place centrale dans les politiques publiques et les dynamiques de réforme
+                institutionnelle.
+            </p>
+        </section>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
-                <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
-                    <i class="fa-solid fa-bullseye text-blue-600"></i> Vision & Impact durable
-                </h4>
-                <p class="text-xs text-slate-600 font-light">HC Santé & Gouvernance contribue au développement de
-                    systèmes :</p>
-                <div class="grid grid-cols-2 gap-2 text-[11px] font-bold text-slate-700">
-                    <span class="bg-slate-50 border border-slate-100 p-2 rounded-lg text-center">Mieux structurés</span>
-                    <span class="bg-slate-50 border border-slate-100 p-2 rounded-lg text-center">Plus accessibles</span>
-                    <span class="bg-slate-50 border border-slate-100 p-2 rounded-lg text-center">Plus inclusifs</span>
-                    <span class="bg-slate-50 border border-slate-100 p-2 rounded-lg text-center">Plus performants</span>
+        <section class="grid md:grid-cols-2 gap-8 items-stretch">
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs flex flex-col justify-between"
+                data-aos="fade-right">
+                <div class="space-y-4">
+                    <span class="text-xs uppercase font-extrabold text-blue-600 tracking-wider">Analyse
+                        Structurelle</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900">Des défis structurels majeurs</h2>
+                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">
+                        Les États et institutions font face à plusieurs enjeux stratégiques :
+                    </p>
+                    <ul class="space-y-2 text-sm font-bold text-slate-700">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            renforcement de la gouvernance sanitaire</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            amélioration de la qualité des services</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            structuration des parcours de prise en charge</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            coordination des acteurs</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            développement des compétences</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            modernisation des organisations</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            inclusion des populations vulnérables</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
+                            renforcement des dispositifs de solidarité et de protection sociale</li>
+                    </ul>
                 </div>
-                <div class="border-t border-slate-100 pt-3 text-[11px] text-slate-500 font-light space-y-1">
-                    <p class="font-bold text-slate-800 uppercase tracking-tight text-[10px]">Notre engagement :</p>
-                    <p>Le développement durable des systèmes sanitaires et sociaux passe par la gouvernance, la
-                        professionnalisation et le renforcement des capacités locales.</p>
-                </div>
+                <p class="text-sm font-bold text-blue-600 pt-4 mt-4 border-t border-slate-100">
+                    Ces évolutions nécessitent des approches adaptées aux réalités locales, fondées sur la coopération,
+                    la professionnalisation et le renforcement durable des capacités.
+                </p>
             </div>
-        </div>
+
+            <div class="bg-slate-900 text-white p-8 rounded-[2rem] flex flex-col justify-between" data-aos="fade-left">
+                <div class="space-y-4">
+                    <span class="text-xs uppercase font-extrabold text-blue-400 tracking-wider">Notre
+                        Positionnement</span>
+                    <h2 class="text-2xl font-extrabold">Une expertise adaptée aux réalités africaines</h2>
+                    <p class="text-sm text-slate-300 font-medium leading-relaxed">
+                        HC Santé & Gouvernance développe une approche institutionnelle et opérationnelle fondée sur :
+                    </p>
+                    <ul class="space-y-2.5 text-sm font-bold text-slate-200">
+                        <li class="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/5"><i
+                                class="fa-solid fa-ear-listen text-blue-400"></i> l’écoute des besoins</li>
+                        <li class="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/5"><i
+                                class="fa-solid fa-map-location-dot text-blue-400"></i> la compréhension des contextes
+                            locaux</li>
+                        <li class="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/5"><i
+                                class="fa-solid fa-arrows-spin text-blue-400"></i> l’accompagnement des dynamiques de
+                            réforme</li>
+                        <li class="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/5"><i
+                                class="fa-solid fa-graduation-cap text-blue-400"></i> le transfert durable de
+                            compétences</li>
+                        <li class="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/5"><i
+                                class="fa-solid fa-cubes text-blue-400"></i> et la structuration progressive des
+                            organisations et dispositifs</li>
+                    </ul>
+                </div>
+                <p class="text-sm font-bold text-blue-400 pt-4 mt-4 border-t border-white/10">
+                    Notre ambition est d’accompagner les institutions et organisations engagées dans la construction de
+                    systèmes sanitaires et sociaux plus inclusifs, plus performants et plus durables.
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 md:p-12 border border-slate-200 rounded-[2rem] shadow-xs space-y-6"
+            data-aos="fade-up">
+            <div class="space-y-2">
+                <span class="text-xs uppercase font-extrabold text-blue-600 tracking-wider">Synergie
+                    Institutionnelle</span>
+                <h2 class="text-2xl font-extrabold text-slate-900">Une approche de coopération et de partenariat</h2>
+                <p class="text-sm text-slate-600 font-semibold">
+                    HC Santé & Gouvernance privilégie une logique de partenariat avec :
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-700">
+                <span class="bg-slate-100 px-3 py-2 rounded-xl border border-slate-200/60">les ministères</span>
+                <span class="bg-slate-100 px-3 py-2 rounded-xl border border-slate-200/60">les établissements
+                    sanitaires</span>
+                <span class="bg-slate-100 px-3 py-2 rounded-xl border border-slate-200/60">les structures
+                    médico-sociales</span>
+                <span class="bg-slate-100 px-3 py-2 rounded-xl border border-slate-200/60">les agences et directions
+                    techniques</span>
+                <span class="bg-slate-100 px-3 py-2 rounded-xl border border-slate-200/60">les collectivités</span>
+                <span class="bg-slate-100 px-3 py-2 rounded-xl border border-slate-200/60">les organisations
+                    internationales</span>
+                <span class="bg-slate-100 px-3 py-2 rounded-xl border border-slate-200/60">et les partenaires techniques
+                    et financiers</span>
+            </div>
+            <p class="text-slate-700 font-semibold text-sm bg-slate-50 p-4 rounded-2xl border border-slate-150">
+                Chaque intervention vise à renforcer durablement les capacités locales et à soutenir les dynamiques
+                nationales de structuration et de gouvernance.
+            </p>
+        </section>
+
+        <section class="space-y-6" data-aos="fade-up">
+            <h2 class="text-2xl font-black text-slate-900 tracking-tight border-b border-slate-200 pb-3">Domaines
+                prioritaires d’intervention</h2>
+            <div class="grid sm:grid-cols-2 gap-6">
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+                    <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2"><i
+                            class="fa-solid fa-landmark text-blue-600 text-sm"></i> Gouvernance sanitaire et
+                        médico-sociale</h3>
+                    <div class="flex flex-wrap gap-1.5 text-xs font-semibold text-slate-600">
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Structuration des organisations</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Appui institutionnel</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Pilotage stratégique</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Accompagnement du changement</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+                    <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2"><i
+                            class="fa-solid fa-shield-heart text-blue-600 text-sm"></i> Couverture maladie universelle
+                        et protection sociale</h3>
+                    <div class="flex flex-wrap gap-1.5 text-xs font-semibold text-slate-600">
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Organisation des dispositifs</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Coordination des parcours</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Renforcement des capacités</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Accès aux soins et inclusion</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+                    <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2"><i
+                            class="fa-solid fa-wheelchair text-blue-600 text-sm"></i> Handicap et inclusion</h3>
+                    <div class="flex flex-wrap gap-1.5 text-xs font-semibold text-slate-600">
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Structuration des politiques handicap</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Inclusion sociale et médico-sociale</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Professionnalisation des acteurs</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Développement des dispositifs
+                            d’accompagnement</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+                    <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2"><i
+                            class="fa-solid fa-users-gear text-blue-600 text-sm"></i> Formation et professionnalisation
+                    </h3>
+                    <div class="flex flex-wrap gap-1.5 text-xs font-semibold text-slate-600">
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Leadership et management</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Gouvernance des organisations</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Culture qualité et performance</span>
+                        <span class="bg-slate-50 px-2 py-1 rounded border">Renforcement durable des compétences</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-slate-900 text-white p-8 md:p-12 rounded-[2rem] space-y-4" data-aos="zoom-in">
+            <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Pérennité</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Une vision tournée vers l’impact durable</h2>
+            <p class="text-slate-300 font-medium text-base">
+                HC Santé & Gouvernance contribue au développement de systèmes sanitaires et sociaux :
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-xs font-bold text-center">
+                <span class="bg-white/5 border border-white/10 p-3 rounded-xl">mieux structurés</span>
+                <span class="bg-white/5 border border-white/10 p-3 rounded-xl">plus accessibles</span>
+                <span class="bg-white/5 border border-white/10 p-3 rounded-xl">plus inclusifs</span>
+                <span class="bg-white/5 border border-white/10 p-3 rounded-xl">plus performants</span>
+                <span class="bg-white/5 border border-white/10 p-3 rounded-xl col-span-2 md:col-span-1">centrés sur les
+                    besoins des populations</span>
+            </div>
+            <div class="pt-4 border-t border-white/10 mt-4 space-y-2">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Notre engagement repose sur une
+                    conviction forte :</p>
+                <p class="text-blue-400 font-bold text-base leading-relaxed">
+                    Le développement durable des systèmes sanitaires et sociaux passe par la gouvernance, la
+                    professionnalisation et le renforcement des capacités locales.
+                </p>
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-2">
-                <img src="logo.png.png" alt="Logo HC" class="h-10 w-auto">
-                <span class="text-white font-semibold">HC Santé & Gouvernance</span>
-            </div>
-            <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
-        </div>
+        <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({ once: true });
+
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const burgerIcon = document.getElementById('burger-icon');
         const navLinks = document.getElementById('nav-links');
-        const dropdownBtn = document.getElementById('dropdown-btn');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-        const arrowIcon = document.getElementById('arrow-icon');
 
-        // 1. Gestion de l'ouverture/fermeture du menu Burger global
         mobileMenuBtn.addEventListener('click', () => {
-            const isHidden = navLinks.classList.contains('hidden');
-            if (isHidden) {
-                navLinks.classList.remove('hidden');
-                burgerIcon.classList.remove('fa-bars');
-                burgerIcon.classList.add('fa-xmark'); // Transforme le burger en "X"
-            } else {
-                navLinks.classList.add('hidden');
-                burgerIcon.classList.remove('fa-xmark');
-                burgerIcon.classList.add('fa-bars');
-            }
-        });
-
-        // 2. Gestion du clic sur "Le Cabinet" UNIQUEMENT sur mobile (< 768px)
-        dropdownBtn.addEventListener('click', (e) => {
-            if (window.innerWidth < 768) {
-                e.preventDefault();
-                const isMenuHidden = dropdownMenu.classList.contains('hidden');
-
-                if (isMenuHidden) {
-                    dropdownMenu.classList.remove('hidden');
-                    arrowIcon.classList.add('rotate-180'); // Pivote la flèche
-                } else {
-                    dropdownMenu.classList.add('hidden');
-                    arrowIcon.classList.remove('rotate-180');
-                }
-            }
+            navLinks.classList.toggle('hidden');
+            burgerIcon.classList.toggle('fa-bars');
+            burgerIcon.classList.toggle('fa-xmark');
         });
     </script>
 </body>
