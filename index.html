@@ -189,18 +189,26 @@
                 <p class="text-slate-300 font-medium text-sm">Vous portez un projet de réforme, de restructuration ou de
                     formation ? Laissez-nous vos coordonnées.</p>
             </div>
-            <form class="grid sm:grid-cols-2 gap-4 text-sm" onsubmit="event.preventDefault();">
-                <input type="text" placeholder="Votre nom complet"
+
+            <form action="https://formspree.io/f/maqkaegp" method="POST" class="grid sm:grid-cols-2 gap-4 text-sm">
+
+                <input type="text" name="name" required placeholder="Votre nom complet"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
-                <input type="email" placeholder="Adresse email professionnelle"
+
+                <input type="email" name="_replyto" required placeholder="Adresse email professionnelle"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
-                <input type="text" placeholder="Organisation ou Institution"
+
+                <input type="text" name="company" placeholder="Organisation ou Institution"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
-                <textarea placeholder="Décrivez succinctement votre besoin stratégique..." rows="4"
+
+                <textarea name="message" required placeholder="Décrivez succinctement votre besoin stratégique..."
+                    rows="4"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium"></textarea>
+
                 <button type="submit"
-                    class="bg-blue-600 text-white font-bold p-4 rounded-xl sm:col-span-2 hover:bg-blue-700 transition cursor-pointer">Envoyer
-                    la demande d'analyse</button>
+                    class="bg-blue-600 text-white font-bold p-4 rounded-xl sm:col-span-2 hover:bg-blue-700 transition cursor-pointer">
+                    Envoyer la demande d'analyse
+                </button>
             </form>
         </section>
 
