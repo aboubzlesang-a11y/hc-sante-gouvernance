@@ -26,50 +26,55 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen pt-24 overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-50 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
+    <nav class="fixed top-0 w-full z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition">
-                <img src="logo.png.png" alt="Logo HC" class="h-11 w-auto object-contain">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition z-50">
+                <img src="logo.png.png" alt="Logo HC" class="h-16 w-auto object-contain">
                 <span class="text-xl font-black tracking-tight hidden sm:inline">Santé & Gouvernance</span>
             </a>
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none text-2xl p-2 cursor-pointer">
-                <i class="fa-solid fa-bars" id="burger-icon"></i>
+
+            <button id="menu-toggle-btn"
+                class="text-white focus:outline-none text-2xl p-2 cursor-pointer hover:text-blue-400 transition z-50 flex items-center gap-2">
+                <span class="text-xs font-bold uppercase tracking-wider hidden sm:inline">Menu</span>
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
-            <div id="nav-links"
-                class="hidden absolute top-full left-0 w-full bg-slate-950 border-b border-white/10 p-6 flex flex-col space-y-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 text-base font-bold text-slate-200">
-                <div class="relative group">
-                    <button id="dropdown-btn"
-                        class="text-white transition flex items-center justify-between w-full md:w-auto gap-1.5 py-2 cursor-pointer">
-                        Menu <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
-                    </button>
-                    <div id="dropdown-menu"
-                        class="hidden md:absolute md:block md:opacity-0 md:pointer-events-none group-hover:md:opacity-100 group-hover:md:pointer-events-auto left-0 mt-1 w-full md:w-56 bg-slate-900 border border-white/10 rounded-xl shadow-2xl p-2 text-left space-y-1 z-50">
-                        <a href="apropos.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">À
-                            propos</a>
-                        <a href="expertises.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Pôles
-                            d'Expertise</a>
-                        <a href="approche.html"
-                            class="block px-4 py-2.5 text-white bg-blue-600/20 rounded-lg transition">Notre Approche</a>
-                        <a href="publics.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publics</a>
-                        <div class="border-t border-white/10 my-1 hidden md:block"></div>
-                        <a href="interventions.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Interventions</a>
-                        <a href="afrique-francophone.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Afrique
-                            Francophone</a>
-                        <a href="publications.html"
-                            class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition">Publications</a>
-                    </div>
-                </div>
-                <a href="index.html#contact"
-                    class="bg-blue-600 text-white text-center px-5 py-2.5 rounded-xl hover:bg-blue-700 transition block md:inline-block">Contact</a>
-            </div>
         </div>
     </nav>
 
+    <div id="side-menu"
+        class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
+        <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
+            <span
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
+                    class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
+            <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-building text-sm opacity-50"></i> À propos</a>
+            <a href="expertises.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-cubes text-sm opacity-50"></i> Pôles d'Expertise</a>
+            <a href="approche.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-route text-sm opacity-50"></i> Notre Approche</a>
+            <a href="publics.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-users text-sm opacity-50"></i> Publics</a>
+            <a href="interventions.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-clipboard-list text-sm opacity-50"></i> Interventions</a>
+            <a href="afrique-francophone.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-earth-africa text-sm opacity-50"></i> Afrique Francophone</a>
+            <a href="publications.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-book-open text-sm opacity-50"></i> Publications</a>
+        </div>
+
+        <div class="pt-6 border-t border-white/10">
+            <a href="#contact" id="menu-contact-btn"
+                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full">
+                <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
+            </a>
+        </div>
+    </div>
+
+    <div id="menu-overlay"
+        class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
+    </div>
     <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
         <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
             <p class="uppercase tracking-widest text-xs font-bold text-blue-400">Méthodologie</p>
@@ -152,14 +157,38 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const burgerIcon = document.getElementById('burger-icon');
-        const navLinks = document.getElementById('nav-links');
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('hidden');
-            burgerIcon.classList.toggle('fa-bars');
-            burgerIcon.classList.toggle('fa-xmark');
-        });
+
+        const menuToggleBtn = document.getElementById('menu-toggle-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const sideMenu = document.getElementById('side-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const menuContactBtn = document.getElementById('menu-contact-btn');
+
+        function toggleMenu() {
+            const isOpen = !sideMenu.classList.contains('translate-x-full');
+
+            if (isOpen) {
+                sideMenu.classList.add('translate-x-full');
+                menuOverlay.classList.add('opacity-0');
+                setTimeout(() => menuOverlay.classList.add('hidden'), 300);
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            } else {
+                menuOverlay.classList.remove('hidden');
+                setTimeout(() => menuOverlay.classList.remove('opacity-0'), 10);
+                sideMenu.classList.remove('translate-x-full');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        menuToggleBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+        if (menuContactBtn) {
+            menuContactBtn.addEventListener('click', toggleMenu);
+        }
     </script>
 </body>
 
