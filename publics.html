@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
         h1,
         h2,
@@ -26,6 +26,7 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen pt-20 overflow-x-hidden">
 
+    <!-- BARRE DE NAVIGATION -->
     <nav class="fixed top-0 w-full z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition z-50">
@@ -41,11 +42,12 @@
         </div>
     </nav>
 
+    <!-- MENU LATÉRAL -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
             <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
                     class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
@@ -65,8 +67,8 @@
         </div>
 
         <div class="pt-6 border-t border-white/10">
-            <a href="#contact" id="menu-contact-btn"
-                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full">
+            <a href="index.html#contact" id="menu-contact-btn"
+                class="bg-indigo-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-indigo-700 transition block w-full shadow-lg shadow-indigo-600/20">
                 <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
             </a>
         </div>
@@ -75,56 +77,93 @@
     <div id="menu-overlay"
         class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
     </div>
+
+    <!-- EN-TÊTE HERO -->
     <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
         <div class="max-w-7xl mx-auto" data-aos="fade-down" data-aos-duration="1000">
-            <p class="uppercase tracking-widest text-xs font-bold text-blue-400 mb-3">Écosystème</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">À quels acteurs s'adressent nos
-                conseils ?</h1>
+            <p class="uppercase tracking-widest text-xs font-black text-blue-400 mb-3">Écosystème</p>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight max-w-4xl">À quels acteurs
+                s'adressent nos conseils ?</h1>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-20 grid sm:grid-cols-2 gap-8 text-sm font-medium">
+    <!-- CONTENU PRINCIPAL (CARTES PUBLICS) -->
+    <main class="max-w-5xl mx-auto px-6 py-20 grid sm:grid-cols-2 gap-8">
 
-        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+        <!-- Carte 1 -->
+        <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="zoom-in"
             data-aos-delay="100">
-            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
-                    class="fa-solid fa-landmark text-blue-600"></i> Ministères & Agences Publiques</h3>
-            <p class="text-slate-600 leading-relaxed font-medium">Appui aux directions stratégiques ministérielles, aux
+            <div
+                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-xl shadow-xs">
+                <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-black text-slate-900 flex items-center gap-2.5 tracking-tight">
+                Ministères & Agences Publiques</h3>
+            <p class="text-slate-600 text-base font-semibold leading-relaxed">Appui aux directions stratégiques
+                ministérielles, aux
                 secrétariats exécutifs de la CMU et aux agences gouvernementales de régulation de la santé.</p>
         </div>
 
-        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+        <!-- Carte 2 -->
+        <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="zoom-in"
             data-aos-delay="200">
-            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
-                    class="fa-solid fa-hospital-user text-blue-600"></i> Établissements de Soins</h3>
-            <p class="text-slate-600 leading-relaxed font-medium">Centres hospitaliers, groupements hospitaliers
+            <div
+                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-xl shadow-xs">
+                <i class="fa-solid fa-hospital-user"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-black text-slate-900 flex items-center gap-2.5 tracking-tight">
+                Établissements de Soins</h3>
+            <p class="text-slate-600 text-base font-semibold leading-relaxed">Centres hospitaliers, groupements
+                hospitaliers
                 régionaux et structures de soins d'envergure, tant publiques que privées, recherchant une efficience
                 managériale.</p>
         </div>
 
-        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+        <!-- Carte 3 -->
+        <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="zoom-in"
             data-aos-delay="300">
-            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
-                    class="fa-solid fa-users text-blue-600"></i> Établissements Médico-Sociaux</h3>
-            <p class="text-slate-600 leading-relaxed font-medium">Structures gestionnaires dédiées à l'inclusion,
+            <div
+                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-xl shadow-xs">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-black text-slate-900 flex items-center gap-2.5 tracking-tight">
+                Établissements Médico-Sociaux</h3>
+            <p class="text-slate-600 text-base font-semibold leading-relaxed">Structures gestionnaires dédiées à
+                l'inclusion,
                 centres d'hébergement pour enfants en rupture sociale ou personnes en situation de perte d’autonomie.
             </p>
         </div>
 
-        <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-3" data-aos="zoom-in"
+        <!-- Carte 4 -->
+        <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="zoom-in"
             data-aos-delay="400">
-            <h3 class="font-extrabold text-slate-900 flex items-center gap-2.5 text-base tracking-tight"><i
-                    class="fa-solid fa-handshake-angle text-blue-600"></i> Bailleurs & ONG Internationales</h3>
-            <p class="text-slate-600 leading-relaxed font-medium">Agences de coopération bilatérales, fondations privées
+            <div
+                class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-xl shadow-xs">
+                <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-black text-slate-900 flex items-center gap-2.5 tracking-tight">Bailleurs
+                & ONG Internationales</h3>
+            <p class="text-slate-600 text-base font-semibold leading-relaxed">Agences de coopération bilatérales,
+                fondations privées
                 internationales et ONG de développement souhaitant sécuriser et évaluer l'impact de leurs
                 investissements.</p>
         </div>
 
     </main>
 
+    <!-- PIED DE PAGE -->
+    <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
+        <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
+    </footer>
+
+    <!-- INTERACTION ET INITIALISATION AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true });
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
         const menuIcon = document.getElementById('menu-icon');

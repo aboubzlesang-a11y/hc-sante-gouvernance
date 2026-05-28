@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
         h1,
         h2,
@@ -26,6 +26,7 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen pt-24 overflow-x-hidden">
 
+    <!-- BARRE DE NAVIGATION -->
     <nav class="fixed top-0 w-full z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition z-50">
@@ -41,11 +42,12 @@
         </div>
     </nav>
 
+    <!-- MENU LATÉRAL -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
             <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
                     class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
@@ -65,8 +67,8 @@
         </div>
 
         <div class="pt-6 border-t border-white/10">
-            <a href="#contact" id="menu-contact-btn"
-                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full">
+            <a href="index.html#contact" id="menu-contact-btn"
+                class="bg-indigo-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-indigo-700 transition block w-full shadow-lg shadow-indigo-600/20">
                 <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
             </a>
         </div>
@@ -75,163 +77,263 @@
     <div id="menu-overlay"
         class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
     </div>
+
+    <!-- EN-TÊTE HERO -->
     <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
-            <p class="uppercase tracking-widest text-xs font-bold text-blue-400">Modalités d'action</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-4xl">
+        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down" data-aos-duration="1000">
+            <p class="uppercase tracking-widest text-xs font-black text-blue-400">Modalités d'action</p>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight max-w-5xl">
                 Des accompagnements adaptés aux enjeux institutionnels et organisationnels
             </h1>
-            <p class="text-slate-300 text-lg font-medium max-w-3xl leading-relaxed pt-2">
+            <p class="text-slate-300 text-base md:text-xl font-medium max-w-3xl leading-relaxed pt-2">
                 HC Santé & Gouvernance accompagne les institutions publiques, établissements sanitaires, structures
                 médico-sociales et organisations engagées dans des dynamiques de gouvernance, de structuration et de
                 professionnalisation.
             </p>
-            <p class="text-blue-400 text-base font-semibold border-l-4 border-blue-500 pl-4 mt-4">
+            <p class="text-blue-400 text-base md:text-lg font-bold border-l-4 border-blue-500 pl-4 mt-4">
                 Notre approche associe expertise stratégique, compréhension opérationnelle du terrain et accompagnement
                 durable des acteurs.
             </p>
         </div>
     </header>
 
+    <!-- GRILLE D'INTERVENTIONS -->
     <main class="max-w-7xl mx-auto px-6 py-20">
         <div class="grid md:grid-cols-2 gap-8 text-slate-800">
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up">
-                <div class="text-blue-600 text-2xl"><i class="fa-solid fa-clipboard-check"></i></div>
-                <h3 class="text-xl font-extrabold text-slate-900">Audit et diagnostic organisationnel</h3>
-                <ul class="space-y-2.5 font-semibold text-sm text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Analyse des organisations et des dispositifs existants</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Évaluation de la gouvernance et des processus</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Identification des axes d’amélioration</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Recommandations stratégiques adaptées aux réalités locales</li>
+            <!-- Carte 1 -->
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs space-y-5" data-aos="fade-up">
+                <div
+                    class="text-blue-600 text-2xl w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shadow-xs">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Audit et diagnostic
+                    organisationnel</h3>
+                <ul class="space-y-3 font-semibold text-base text-slate-600">
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Analyse des organisations et des dispositifs existants</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Évaluation de la gouvernance et des processus</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Identification des axes d’amélioration</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Recommandations stratégiques adaptées aux réalités locales</span>
+                    </li>
                 </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="text-blue-600 text-2xl"><i class="fa-solid fa-building-shield"></i></div>
-                <h3 class="text-xl font-extrabold text-slate-900">Accompagnement des réformes sanitaires et
-                    médico-sociales</h3>
-                <ul class="space-y-2.5 font-semibold text-sm text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Appui à la structuration des politiques publiques</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Organisation des dispositifs sanitaires et sociaux</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Conduite du changement institutionnel</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Appui aux dynamiques de modernisation et de professionnalisation</li>
+            <!-- Carte 2 -->
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs space-y-5" data-aos="fade-up"
+                data-aos-delay="150">
+                <div
+                    class="text-blue-600 text-2xl w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shadow-xs">
+                    <i class="fa-solid fa-building-shield"></i>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Accompagnement des réformes
+                    sanitaires</h3>
+                <ul class="space-y-3 font-semibold text-base text-slate-600">
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Appui à la structuration des politiques publiques</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Organisation des dispositifs sanitaires et sociaux</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Conduite du changement institutionnel</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Appui aux dynamiques de modernisation et de professionnalisation</span>
+                    </li>
                 </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up">
-                <div class="text-blue-600 text-2xl"><i class="fa-solid fa-hand-holding-hand"></i></div>
-                <h3 class="text-xl font-extrabold text-slate-900">Couverture maladie universelle et protection sociale
-                </h3>
-                <ul class="space-y-2.5 font-semibold text-sm text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Renforcement des capacités des acteurs</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Structuration des parcours de prise en charge</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Coordination sanitaire et sociale</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Appui aux dispositifs d’accès aux soins et de solidarité</li>
+            <!-- Carte 3 -->
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs space-y-5" data-aos="fade-up">
+                <div
+                    class="text-blue-600 text-2xl w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shadow-xs">
+                    <i class="fa-solid fa-hand-holding-hand"></i>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Couverture maladie universelle
+                    et protection sociale</h3>
+                <ul class="space-y-3 font-semibold text-base text-slate-600">
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Renforcement des capacités des acteurs</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Structuration des parcours de prise en charge</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Coordination sanitaire et sociale</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Appui aux dispositifs d’accès aux soins et de solidarité</span>
+                    </li>
                 </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="text-blue-600 text-2xl"><i class="fa-solid fa-wheelchair"></i></div>
-                <h3 class="text-xl font-extrabold text-slate-900">Handicap et iNclusion</h3>
-                <ul class="space-y-2.5 font-semibold text-sm text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Structuration des politiques handicap</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Développement des dispositifs d’accompagnement</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Inclusion sociale et médico-sociale</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Professionnalisation des acteurs de terrain</li>
+            <!-- Carte 4 (Erreur d'orthographe "iNclusion" résolue) -->
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs space-y-5" data-aos="fade-up"
+                data-aos-delay="150">
+                <div
+                    class="text-blue-600 text-2xl w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shadow-xs">
+                    <i class="fa-solid fa-wheelchair"></i>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Handicap et Inclusion</h3>
+                <ul class="space-y-3 font-semibold text-base text-slate-600">
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Structuration des politiques handicap</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Développement des dispositifs d’accompagnement</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Inclusion sociale et médico-sociale</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Professionnalisation des acteurs de terrain</span>
+                    </li>
                 </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up">
-                <div class="text-blue-600 text-2xl"><i class="fa-solid fa-user-tie"></i></div>
-                <h3 class="text-xl font-extrabold text-slate-900">Formation des cadres et dirigeants</h3>
-                <ul class="space-y-2.5 font-semibold text-sm text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Leadership et management</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Gouvernance des organisations</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Pilotage stratégique</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Culture qualité et performance</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Renforcement durable des compétences</li>
+            <!-- Carte 5 -->
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs space-y-5" data-aos="fade-up">
+                <div
+                    class="text-blue-600 text-2xl w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shadow-xs">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Formation des cadres et
+                    dirigeants</h3>
+                <ul class="space-y-3 font-semibold text-base text-slate-600">
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Leadership et management</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Gouvernance des organisations</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Pilotage stratégique</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Culture qualité et performance</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Renforcement durable des compétences</span>
+                    </li>
                 </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="text-blue-600 text-2xl"><i class="fa-solid fa-handshake-angle"></i></div>
-                <h3 class="text-xl font-extrabold text-slate-900">Assistance technique et appui institutionnel</h3>
-                <ul class="space-y-2.5 font-semibold text-sm text-slate-600">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Accompagnement opérationnel des directions</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Appui méthodologique</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Élaboration de feuilles de route stratégiques</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Coordination de projets et dispositifs complexes</li>
+            <!-- Carte 6 -->
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs space-y-5" data-aos="fade-up"
+                data-aos-delay="150">
+                <div
+                    class="text-blue-600 text-2xl w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shadow-xs">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Assistance technique et appui
+                    institutionnel</h3>
+                <ul class="space-y-3 font-semibold text-base text-slate-600">
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Accompagnement opérationnel des directions</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Appui méthodologique</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Élaboration de feuilles de route stratégiques</span>
+                    </li>
+                    <li class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Coordination de projets et dispositifs complexes</span>
+                    </li>
                 </ul>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4 md:col-span-2"
+            <!-- Carte 7 (Pleine largeur) -->
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs space-y-5 md:col-span-2"
                 data-aos="fade-up">
-                <div class="text-blue-600 text-2xl"><i class="fa-solid fa-arrow-trend-up"></i></div>
-                <h3 class="text-xl font-extrabold text-slate-900">Qualité et performance des organisations</h3>
-                <div class="grid sm:grid-cols-2 gap-4 font-semibold text-sm text-slate-600">
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Développement de la culture qualité</p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Optimisation des pratiques organisationnelles</p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Amélioration continue des services</p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-blue-600"></i>
-                        Structuration des démarches de performance</p>
+                <div
+                    class="text-blue-600 text-2xl w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shadow-xs">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Qualité et performance des
+                    organisations</h3>
+                <div class="grid sm:grid-cols-2 gap-4 font-semibold text-base text-slate-600">
+                    <p class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Développement de la culture qualité</span>
+                    </p>
+                    <p class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Optimisation des pratiques organisationnelles</span>
+                    </p>
+                    <p class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Amélioration continue des services</span>
+                    </p>
+                    <p class="flex items-start gap-3 pt-0.5"><i
+                            class="fa-solid fa-circle text-[6px] text-blue-600 mt-2.5 shrink-0"></i>
+                        <span>Structuration des démarches de performance</span>
+                    </p>
                 </div>
             </div>
 
         </div>
 
+        <!-- SECTION PHILOSOPHIE -->
         <section class="mt-20 p-8 md:p-12 bg-slate-900 text-white rounded-[2rem] space-y-4" data-aos="zoom-in">
-            <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Notre Philosophie</span>
-            <h2 class="text-2xl md:text-3xl font-extrabold">Une approche fondée sur la coopération</h2>
-            <p class="text-slate-300 font-medium text-base leading-relaxed max-w-4xl">
+            <span class="text-xs font-black text-blue-400 tracking-widest uppercase">Notre Philosophie</span>
+            <h2 class="text-2xl md:text-4xl font-black tracking-tight">Une approche fondée sur la coopération</h2>
+            <p class="text-slate-300 font-semibold text-base md:text-lg leading-relaxed max-w-4xl">
                 HC Santé & Gouvernance privilégie une approche collaborative, institutionnelle et adaptée aux réalités
                 des systèmes sanitaires et sociaux en Afrique francophone.
             </p>
-            <p class="text-slate-300 font-medium text-base leading-relaxed max-w-4xl">
+            <p class="text-slate-300 font-semibold text-base md:text-lg leading-relaxed max-w-4xl">
                 Notre ambition est de contribuer durablement au renforcement des capacités, à l’amélioration de la
                 gouvernance et à la structuration des dispositifs au service des populations.
             </p>
         </section>
     </main>
 
+    <!-- PIED DE PAGE -->
     <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
         <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
     </footer>
 
+    <!-- INTERACTION ET INITIALISATION AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true });
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
         const menuIcon = document.getElementById('menu-icon');

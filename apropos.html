@@ -26,6 +26,7 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen pt-20 overflow-x-hidden">
 
+    <!-- BARRE DE NAVIGATION -->
     <nav class="fixed top-0 w-full z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition z-50">
@@ -41,11 +42,12 @@
         </div>
     </nav>
 
+    <!-- MENU LATÉRAL -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
             <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
                     class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
@@ -65,8 +67,8 @@
         </div>
 
         <div class="pt-6 border-t border-white/10">
-            <a href="#contact" id="menu-contact-btn"
-                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full">
+            <a href="index.html#contact" id="menu-contact-btn"
+                class="bg-indigo-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-indigo-700 transition block w-full shadow-lg shadow-indigo-600/20">
                 <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
             </a>
         </div>
@@ -76,26 +78,31 @@
         class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
     </div>
 
+    <!-- EN-TÊTE HERO -->
     <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6 relative">
         <div class="max-w-7xl mx-auto" data-aos="fade-down" data-aos-duration="1000">
-            <p class="uppercase tracking-widest text-xs font-bold text-blue-400 mb-3">Notre ADN Institutionnel</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">Une ingénierie
-                conseil de haut niveau pour piloter les réformes de santé</h1>
+            <p class="uppercase tracking-widest text-xs font-black text-blue-400 mb-3" data-aos="fade-down"
+                data-aos-delay="200">Notre ADN Institutionnel</p>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight max-w-4xl leading-tight" data-aos="fade-down"
+                data-aos-delay="400">Une ingénierie conseil de haut niveau pour piloter les réformes de santé</h1>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-20 space-y-20">
-        <section class="grid md:grid-cols-3 gap-12 items-start" data-aos="fade-up">
+    <!-- CONTENU PRINCIPAL -->
+    <main class="max-w-6xl mx-auto px-6 py-20 space-y-24">
+
+        <!-- SECTION HISTOIRE / QUI SOMMES-NOUS -->
+        <section class="grid md:grid-cols-3 gap-12 items-start" data-aos="fade-up" data-aos-duration="1000">
             <div class="space-y-3">
-                <span class="text-blue-600 font-bold uppercase tracking-wider text-xs">Qui sommes-nous ?</span>
-                <h2 class="text-2xl font-bold tracking-tight text-slate-900">Un maillon stratégique entre politiques
-                    publiques et réalités de terrain</h2>
+                <span class="text-blue-600 font-black uppercase tracking-wider text-xs">Qui sommes-nous ?</span>
+                <h2 class="text-2xl md:text-3xl font-black tracking-tight text-slate-900">Un maillon stratégique entre
+                    politiques publiques et réalités de terrain</h2>
             </div>
-            <div class="md:col-span-2 text-slate-700 space-y-6 text-base leading-relaxed font-medium">
+            <div class="md:col-span-2 text-slate-700 space-y-6 text-base md:text-lg leading-relaxed font-medium">
                 <p>
                     Fondée sur une expérience approfondie de la gouvernance sanitaire, du management et de la formation
                     des cadres de santé, ainsi que de la structuration des dispositifs médico-sociaux et des
-                    organisations, <span class="text-slate-900 font-semibold">HC Santé & Gouvernance</span> se
+                    organisations, <span class="text-slate-900 font-black">HC Santé & Gouvernance</span> se
                     positionne comme un partenaire stratégique des acteurs institutionnels.
                 </p>
                 <p>
@@ -107,32 +114,89 @@
             </div>
         </section>
 
-        <section class="grid md:grid-cols-3 gap-8 pt-16 border-t border-slate-200" data-aos="fade-up">
-            <h2 class="text-xl font-bold text-slate-900 uppercase tracking-wide">Nos Engagements Fondamentaux</h2>
-            <div class="md:col-span-2 grid sm:grid-cols-2 gap-6 text-sm">
-                <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-xs space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600"><i
-                            class="fa-solid fa-gavel"></i></div>
-                    <h3 class="font-bold text-slate-900 text-base">Conformité & Cadres Réglementaires</h3>
-                    <p class="text-slate-600 font-medium leading-relaxed">Toutes nos interventions s'inscrivent dans le
+        <!-- SECTION ENGAGEMENTS -->
+        <section class="space-y-12 pt-16 border-t border-slate-200">
+            <div class="space-y-3" data-aos="fade-right" data-aos-duration="800">
+                <span class="text-blue-600 font-black uppercase tracking-wider text-xs">Valeurs & Actions</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Nos Engagements Fondamentaux
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Engagement 1 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="fade-up"
+                    data-aos-duration="800">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-xl shadow-xs">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Conformité & Cadres
+                        Réglementaires</h3>
+                    <p class="text-slate-600 text-base font-semibold leading-relaxed">Toutes nos interventions
+                        s'inscrivent dans le
                         strict respect des conventions internationales et des réformes juridiques des pays d'Afrique
                         subsaharienne.</p>
                 </div>
-                <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-xs space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600"><i
-                            class="fa-solid fa-seedling"></i></div>
-                    <h3 class="font-bold text-slate-900 text-base">Pérennisation des Acquis</h3>
-                    <p class="text-slate-600 font-medium leading-relaxed">Nous ne concevons pas de rapports sans plan
+
+                <!-- Engagement 2 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="fade-up"
+                    data-aos-duration="800" data-aos-delay="150">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl shadow-xs">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Pérennisation des Acquis
+                    </h3>
+                    <p class="text-slate-600 text-base font-semibold leading-relaxed">Nous ne concevons pas de rapports
+                        sans plan
                         d’action opérationnel. Le transfert de compétences immédiat reste notre priorité absolue pour
                         garantir l'autonomie des cadres.</p>
+                </div>
+
+                <!-- Engagement 3 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="fade-up"
+                    data-aos-duration="800">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 text-xl shadow-xs">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Co-construction de
+                        Proximité</h3>
+                    <p class="text-slate-600 text-base font-semibold leading-relaxed">Nous refusons les solutions
+                        préformatées. Nos experts s'immergent sur le terrain auprès de vos équipes pour élaborer des
+                        feuilles de route adaptées à votre contexte.</p>
+                </div>
+
+                <!-- Engagement 4 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-[2rem] shadow-xs space-y-4" data-aos="fade-up"
+                    data-aos-duration="800" data-aos-delay="150">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 text-xl shadow-xs">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Rigueur & Éthique
+                        Institutionnelle</h3>
+                    <p class="text-slate-600 text-base font-semibold leading-relaxed">Nous maintenons une transparence
+                        technique absolue et une confidentialité totale pour sécuriser la gouvernance des systèmes
+                        d'information et de gestion.</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- PIED DE PAGE -->
+    <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
+        <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
+    </footer>
+
+    <!-- SCRIPT LOGIQUE ET ANIMATION -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true });
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
         const menuIcon = document.getElementById('menu-icon');

@@ -7,6 +7,7 @@
     <title>Pôles d'Expertise | HC Santé & Gouvernance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
@@ -26,13 +27,13 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen pt-24 overflow-x-hidden">
 
+    <!-- BARRE DE NAVIGATION COMMUNE (FIXE) -->
     <nav class="fixed top-0 w-full z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition z-50">
                 <img src="logo.png.png" alt="Logo HC" class="h-16 w-auto object-contain">
                 <span class="text-xl font-black tracking-tight hidden sm:inline">Santé & Gouvernance</span>
             </a>
-
             <button id="menu-toggle-btn"
                 class="text-white focus:outline-none text-2xl p-2 cursor-pointer hover:text-blue-400 transition z-50 flex items-center gap-2">
                 <span class="text-xs font-bold uppercase tracking-wider hidden sm:inline">Menu</span>
@@ -41,16 +42,17 @@
         </div>
     </nav>
 
+    <!-- MENU LATÉRAL (DRAWER) -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
-            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
+            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-building text-sm opacity-50"></i> À propos</a>
-            <a href="expertises.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+            <a href="expertises.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
                     class="fa-solid fa-cubes text-sm opacity-50"></i> Pôles d'Expertise</a>
             <a href="approche.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-route text-sm opacity-50"></i> Notre Approche</a>
@@ -63,92 +65,116 @@
             <a href="publications.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-book-open text-sm opacity-50"></i> Publications</a>
         </div>
-
         <div class="pt-6 border-t border-white/10">
-            <a href="#contact" id="menu-contact-btn"
-                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full">
+            <a href="index.html#contact" id="menu-contact-btn"
+                class="bg-indigo-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-indigo-700 transition block w-full shadow-lg shadow-indigo-600/20">
                 <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
             </a>
         </div>
     </div>
 
+    <!-- ZONE DE FLOU ARRIÈRE-PLAN -->
     <div id="menu-overlay"
         class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
     </div>
-    <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
-            <p class="uppercase tracking-widest text-xs font-bold text-blue-400">Savoir-Faire</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-4xl">
+
+    <!-- HERO HEADER (Écritures agrandies et impactantes comme l'accueil) -->
+    <header
+        class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-28 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto space-y-6 relative z-10" data-aos="fade-down">
+            <span
+                class="text-xs uppercase font-extrabold tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Savoir-Faire
+                & Domaines</span>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight max-w-4xl">
                 Nos 4 Pôles d'Expertise Stratégique
             </h1>
-            <p class="text-slate-300 text-base md:text-lg font-medium max-w-3xl leading-relaxed">
-                Une offre globale structurée pour répondre avec précision aux grands défis des systèmes sanitaires,
-                institutionnels et médico-sociaux.
+            <p class="text-slate-300 text-base md:text-xl font-medium max-w-3xl leading-relaxed">
+                Une offre globale et rigoureuse structurée pour répondre avec précision aux grands défis de gouvernance
+                des systèmes sanitaires, institutionnels et médico-sociaux.
             </p>
         </div>
     </header>
 
+    <!-- CONTENT (Cartes avec textes agrandis, plus lisibles et aérés) -->
     <main class="max-w-7xl mx-auto px-6 py-20">
-        <div class="grid sm:grid-cols-2 gap-8 text-slate-800">
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
 
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between"
+            <!-- Pôle 1 -->
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-200 shadow-xs flex flex-col justify-between space-y-6"
                 data-aos="fade-up">
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div
-                        class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl font-bold">
+                        class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold border border-blue-100">
                         <i class="fa-solid fa-gavel"></i>
                     </div>
-                    <h3 class="text-xl font-extrabold text-slate-900">1. Gouvernance & Stratégie Sanitaire</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">
-                        Accompagnement à la modernisation des structures publiques et hospitalières, restructuration des
-                        instances décisionnelles et déploiement de politiques de santé publique à fort impact
-                        territorial.
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Pôle 01</span>
+                        <h3 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Gouvernance &
+                            Stratégie Sanitaire</h3>
+                    </div>
+                    <p class="text-slate-600 text-base md:text-lg font-semibold leading-relaxed">
+                        Modernisation des structures publiques, restructuration complète des instances décisionnelles et
+                        déploiement stratégique de politiques de santé publique adaptées aux territoires.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between"
+            <!-- Pôle 2 -->
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-200 shadow-xs flex flex-col justify-between space-y-6"
                 data-aos="fade-up" data-aos-delay="100">
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div
-                        class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-xl font-bold">
+                        class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl font-bold border border-purple-100">
                         <i class="fa-solid fa-heart-pulse"></i>
                     </div>
-                    <h3 class="text-xl font-extrabold text-slate-900">2. Protection Sociale & CMU</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">
-                        Ingénierie organisationnelle dédiée à l’extension de la Couverture Maladie Universelle, à la
-                        viabilité des systèmes de prévoyance et à la fluidité des parcours de soins solidaires.
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-purple-600 uppercase tracking-widest">Pôle 02</span>
+                        <h3 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Protection Sociale &
+                            CMU</h3>
+                    </div>
+                    <p class="text-slate-600 text-base md:text-lg font-semibold leading-relaxed">
+                        Ingénierie organisationnelle et financière dédiée à l’extension de la Couverture Maladie
+                        Universelle (CMU) et à la viabilité à long terme des systèmes de protection.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between"
+            <!-- Pôle 3 -->
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-200 shadow-xs flex flex-col justify-between space-y-6"
                 data-aos="fade-up">
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div
-                        class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl font-bold">
+                        class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-bold border border-emerald-100">
                         <i class="fa-solid fa-users-viewfinder"></i>
                     </div>
-                    <h3 class="text-xl font-extrabold text-slate-900">3. Secteur Médico-Social & Inclusion</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">
-                        Conception de schémas directeurs pour la prise en charge du handicap, renforcement de
-                        l’inclusion et structuration des cadres réglementaires et opérationnels des établissements
-                        spécialisés.
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Pôle 03</span>
+                        <h3 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Secteur Médico-Social
+                            & Inclusion</h3>
+                    </div>
+                    <p class="text-slate-600 text-base md:text-lg font-semibold leading-relaxed">
+                        Conception de schémas directeurs inclusifs pour la prise en charge globale du handicap, de la
+                        dépendance et structuration des cadres réglementaires nationaux.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between"
+            <!-- Pôle 4 -->
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-200 shadow-xs flex flex-col justify-between space-y-6"
                 data-aos="fade-up" data-aos-delay="100">
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div
-                        class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-xl font-bold">
+                        class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl font-bold border border-amber-100">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="text-xl font-extrabold text-slate-900">4. Professionnalisation & Leadership</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">
-                        Programmes de montée en compétences pour cadres de direction et managers de la santé, centrés
-                        sur la culture qualité, la performance collective et le pilotage du changement.
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Pôle 04</span>
+                        <h3 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Professionnalisation &
+                            Leadership</h3>
+                    </div>
+                    <p class="text-slate-600 text-base md:text-lg font-semibold leading-relaxed">
+                        Programmes d'accompagnement et de montée en compétences de haut niveau pour les cadres de
+                        direction, ministères et hauts managers de la santé publique.
                     </p>
                 </div>
             </div>
@@ -160,6 +186,7 @@
         <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
     </footer>
 
+    <!-- SCRIPT GESTION DU MENU -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
@@ -172,7 +199,6 @@
 
         function toggleMenu() {
             const isOpen = !sideMenu.classList.contains('translate-x-full');
-
             if (isOpen) {
                 sideMenu.classList.add('translate-x-full');
                 menuOverlay.classList.add('opacity-0');
@@ -193,7 +219,9 @@
         menuToggleBtn.addEventListener('click', toggleMenu);
         menuOverlay.addEventListener('click', toggleMenu);
         if (menuContactBtn) {
-            menuContactBtn.addEventListener('click', toggleMenu);
+            menuContactBtn.addEventListener('click', () => {
+                document.body.style.overflow = '';
+            });
         }
     </script>
 </body>

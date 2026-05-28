@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
         h1,
         h2,
@@ -26,6 +26,7 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen pt-24 overflow-x-hidden">
 
+    <!-- BARRE DE NAVIGATION -->
     <nav class="fixed top-0 w-full z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition z-50">
@@ -41,11 +42,12 @@
         </div>
     </nav>
 
+    <!-- MENU LATÉRAL -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
             <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
                     class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
@@ -65,8 +67,8 @@
         </div>
 
         <div class="pt-6 border-t border-white/10">
-            <a href="#contact" id="menu-contact-btn"
-                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full">
+            <a href="index.html#contact" id="menu-contact-btn"
+                class="bg-indigo-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-indigo-700 transition block w-full shadow-lg shadow-indigo-600/20">
                 <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
             </a>
         </div>
@@ -75,73 +77,96 @@
     <div id="menu-overlay"
         class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
     </div>
+
+    <!-- EN-TÊTE HERO -->
     <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
-            <p class="uppercase tracking-widest text-xs font-bold text-blue-400">Méthodologie</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-4xl">
+        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down" data-aos-duration="1000">
+            <p class="uppercase tracking-widest text-xs font-black text-blue-400">Méthodologie</p>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight max-w-4xl">
                 Notre Méthode : 5 Piliers d'Action Continus
             </h1>
-            <p class="text-slate-300 text-base md:text-lg font-medium max-w-3xl leading-relaxed">
+            <p class="text-slate-300 text-base md:text-xl font-medium max-w-3xl leading-relaxed">
                 Une démarche sur-mesure, collaborative et structurée pour garantir la pérennité et la réussite des
                 transformations sectorielles.
             </p>
         </div>
     </header>
 
+    <!-- CONTENU PRINCIPAL (FRISE CHRONOLOGIQUE) -->
     <main class="max-w-5xl mx-auto px-6 py-20">
         <div
-            class="space-y-12 relative before:absolute before:top-0 before:bottom-0 before:left-6 sm:before:left-1/2 before:w-0.5 before:bg-slate-200">
+            class="space-y-16 relative before:absolute before:top-0 before:bottom-0 before:left-6 sm:before:left-1/2 before:w-0.5 before:bg-slate-200">
 
-            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right">
-                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+            <!-- Phase 01 -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right"
+                data-aos-duration="800">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2 shadow-xs">
+                </div>
                 <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
-                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 01</span>
-                    <h3 class="text-lg font-extrabold text-slate-900">Immersion & Diagnostic Local</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Analyse minutieuse de l'existant,
+                    <span class="text-xs font-black text-blue-600 uppercase tracking-wider">Phase 01</span>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Immersion & Diagnostic
+                        Local</h3>
+                    <p class="text-base text-slate-600 font-semibold leading-relaxed">Analyse minutieuse de l'existant,
                         écoute des parties prenantes et décryptage des réalités du terrain.</p>
                 </div>
                 <div class="hidden sm:block sm:w-[45%]"></div>
             </div>
 
-            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-left">
-                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+            <!-- Phase 02 -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-left"
+                data-aos-duration="800">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2 shadow-xs">
+                </div>
                 <div class="hidden sm:block sm:w-[45%]"></div>
                 <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
-                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 02</span>
-                    <h3 class="text-lg font-extrabold text-slate-900">Co-conception Stratégique</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Élaboration conjointe des feuilles
+                    <span class="text-xs font-black text-blue-600 uppercase tracking-wider">Phase 02</span>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Co-conception Stratégique
+                    </h3>
+                    <p class="text-base text-slate-600 font-semibold leading-relaxed">Élaboration conjointe des feuilles
                         de route et des solutions réglementaires ou organisationnelles.</p>
                 </div>
             </div>
 
-            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right">
-                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+            <!-- Phase 03 -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right"
+                data-aos-duration="800">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2 shadow-xs">
+                </div>
                 <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
-                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 03</span>
-                    <h3 class="text-lg font-extrabold text-slate-900">Appui Opérationnel Rapproché</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Assistance technique de proximité
+                    <span class="text-xs font-black text-blue-600 uppercase tracking-wider">Phase 03</span>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Appui Opérationnel
+                        Rapproché</h3>
+                    <p class="text-base text-slate-600 font-semibold leading-relaxed">Assistance technique de proximité
                         auprès des directions et équipes projets pour sécuriser le déploiement.</p>
                 </div>
                 <div class="hidden sm:block sm:w-[45%]"></div>
             </div>
 
-            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-left">
-                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+            <!-- Phase 04 -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-left"
+                data-aos-duration="800">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2 shadow-xs">
+                </div>
                 <div class="hidden sm:block sm:w-[45%]"></div>
                 <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
-                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 04</span>
-                    <h3 class="text-lg font-extrabold text-slate-900">Transfert de Compétences</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Formations ciblées et encadrement
+                    <span class="text-xs font-black text-blue-600 uppercase tracking-wider">Phase 04</span>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Transfert de Compétences
+                    </h3>
+                    <p class="text-base text-slate-600 font-semibold leading-relaxed">Formations ciblées et encadrement
                         managérial pour autonomiser durablement les cadres locaux.</p>
                 </div>
             </div>
 
-            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right">
-                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2"></div>
+            <!-- Phase 05 -->
+            <div class="relative flex flex-col sm:flex-row items-start sm:justify-between" data-aos="fade-right"
+                data-aos-duration="800">
+                <div class="absolute left-6 sm:left-1/2 w-4 h-4 bg-blue-600 rounded-full -translate-x-2 shadow-xs">
+                </div>
                 <div class="sm:w-[45%] pl-12 sm:pl-0 pt-1 space-y-2">
-                    <span class="text-xs font-bold text-blue-600 uppercase">Phase 05</span>
-                    <h3 class="text-lg font-extrabold text-slate-900">Évaluation & Amélioration Continue</h3>
-                    <p class="text-sm text-slate-600 font-semibold leading-relaxed">Mesure fine des impacts et mise en
+                    <span class="text-xs font-black text-blue-600 uppercase tracking-wider">Phase 05</span>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">Évaluation & Amélioration
+                        Continue</h3>
+                    <p class="text-base text-slate-600 font-semibold leading-relaxed">Mesure fine des impacts et mise en
                         place d'une culture de la performance pour pérenniser les réformes.</p>
                 </div>
                 <div class="hidden sm:block sm:w-[45%]"></div>
@@ -150,13 +175,19 @@
         </div>
     </main>
 
+    <!-- PIED DE PAGE -->
     <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
         <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
     </footer>
 
+    <!-- LOGIQUE LOGICIELLE ET INITIALISATION AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true });
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
         const menuIcon = document.getElementById('menu-icon');
