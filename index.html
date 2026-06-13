@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=600;700;800&family=Inter:wght=400;500;600;700&display=swap');
 
         h1,
         h2,
@@ -41,13 +41,20 @@
         </div>
     </nav>
 
+    <!-- MENU LATÉRAL MODIFIÉ AVEC LIEN ACTIF SOULIGNÉ EN BLEU -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
-            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
-                    class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+
+            <!-- Lien Actif : Accueil -->
+            <a href="index.html"
+                class="text-blue-400 font-black underline decoration-2 underline-offset-4 py-1 flex items-center gap-3 pointer-events-none">
+                <i class="fa-solid fa-house text-sm"></i> Accueil
+            </a>
+
+            <!-- Autres liens de navigation -->
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-building text-sm opacity-50"></i> À propos</a>
             <a href="expertises.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
@@ -232,28 +239,25 @@
             const isOpen = !sideMenu.classList.contains('translate-x-full');
 
             if (isOpen) {
-                // Fermeture du menu
                 sideMenu.classList.add('translate-x-full');
                 menuOverlay.classList.add('opacity-0');
                 setTimeout(() => menuOverlay.classList.add('hidden'), 300);
                 menuIcon.classList.remove('fa-xmark');
                 menuIcon.classList.add('fa-bars');
-                document.body.style.overflow = ''; // Réactive le défilement
+                document.body.style.overflow = '';
             } else {
-                // Ouverture du menu
                 menuOverlay.classList.remove('hidden');
                 setTimeout(() => menuOverlay.classList.remove('opacity-0'), 10);
                 sideMenu.classList.remove('translate-x-full');
                 menuIcon.classList.remove('fa-bars');
                 menuIcon.classList.add('fa-xmark');
-                document.body.style.overflow = 'hidden'; // Bloque le défilement du site
+                document.body.style.overflow = 'hidden';
             }
         }
 
-        // Événements d'ouverture / fermeture
         menuToggleBtn.addEventListener('click', toggleMenu);
         menuOverlay.addEventListener('click', toggleMenu);
-        menuContactBtn.addEventListener('click', toggleMenu); // Ferme aussi le menu si on clique sur contact
+        menuContactBtn.addEventListener('click', toggleMenu);
     </script>
 </body>
 

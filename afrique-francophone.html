@@ -26,6 +26,7 @@
 
 <body class="bg-slate-50 text-slate-900 min-h-screen pt-24 overflow-x-hidden">
 
+    <!-- BARRE DE NAVIGATION -->
     <nav class="fixed top-0 w-full z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 py-4 text-white">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition z-50">
@@ -41,12 +42,13 @@
         </div>
     </nav>
 
+    <!-- MENU LATÉRAL -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
-            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-building text-sm opacity-50"></i> À propos</a>
@@ -58,15 +60,19 @@
                     class="fa-solid fa-users text-sm opacity-50"></i> Publics</a>
             <a href="interventions.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-clipboard-list text-sm opacity-50"></i> Interventions</a>
-            <a href="afrique-francophone.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
-                    class="fa-solid fa-earth-africa text-sm opacity-50"></i> Afrique Francophone</a>
+
+            <!-- LIEN ACTIF ICI -->
+            <a href="afrique-francophone.html"
+                class="text-blue-400 font-black underline decoration-2 underline-offset-4 py-1 flex items-center gap-3 pointer-events-none"><i
+                    class="fa-solid fa-earth-africa text-sm"></i> Afrique Francophone</a>
+
             <a href="publications.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-book-open text-sm opacity-50"></i> Publications</a>
         </div>
 
         <div class="pt-6 border-t border-white/10">
             <a href="index.html#contact" id="menu-contact-btn"
-                class="bg-indigo-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-indigo-700 transition block w-full shadow-lg shadow-indigo-600/20">
+                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full shadow-lg shadow-blue-600/20">
                 <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
             </a>
         </div>
@@ -76,6 +82,7 @@
         class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
     </div>
 
+    <!-- EN-TÊTE HERO -->
     <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
         <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down" data-aos-duration="1000">
             <p class="uppercase tracking-widest text-xs font-black text-blue-400">Ancrage Régional</p>
@@ -89,8 +96,10 @@
         </div>
     </header>
 
+    <!-- CONTENU PRINCIPAL -->
     <main class="max-w-7xl mx-auto px-6 py-20 space-y-16">
 
+        <!-- SECTION DYNAMIQUES DE RÉFORME -->
         <section class="bg-white p-8 md:p-12 border border-slate-200 rounded-[2rem] shadow-xs space-y-6"
             data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Des enjeux au cœur des dynamiques
@@ -120,8 +129,8 @@
             </p>
         </section>
 
+        <!-- SECTION COLLATÉRALE : DÉFIS VS EXPERTISE -->
         <section class="grid md:grid-cols-2 gap-8 items-stretch">
-
             <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-xs flex flex-col justify-between space-y-6"
                 data-aos="fade-right">
                 <div class="space-y-4">
@@ -189,29 +198,40 @@
             </div>
         </section>
 
+        <!-- SECTION COOPÉRATION ET PARTENARIAT (IMAGE c1ec7883-50b1-4941-ac07-a8e4e3e47682) -->
         <section class="bg-white p-8 md:p-12 border border-slate-200 rounded-[2rem] shadow-xs space-y-6"
             data-aos="fade-up">
             <div class="space-y-2">
                 <span class="text-xs uppercase font-black text-blue-600 tracking-wider">Synergie Institutionnelle</span>
-                <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Une approche de coopération et
-                    de partenariat</h2>
-                <p class="text-base text-slate-600 font-semibold">
-                    HC Santé & Gouvernance privilégie une logique de partenariat avec :
-                </p>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Notre approche de coopération
+                    et de partenariat</h2>
+                <p class="text-base text-slate-600 font-semibold">La Gouvernance privilégie une logique de partenariat
+                    avec :</p>
             </div>
-            <div class="flex flex-wrap gap-2.5 text-xs md:text-sm font-bold text-slate-700">
-                <span class="bg-slate-100 px-4 py-2.5 rounded-xl border border-slate-200/60">les ministères</span>
-                <span class="bg-slate-100 px-4 py-2.5 rounded-xl border border-slate-200/60">les établissements
-                    sanitaires</span>
-                <span class="bg-slate-100 px-4 py-2.5 rounded-xl border border-slate-200/60">les structures
-                    médico-sociales</span>
-                <span class="bg-slate-100 px-4 py-2.5 rounded-xl border border-slate-200/60">les agences et directions
-                    techniques</span>
-                <span class="bg-slate-100 px-4 py-2.5 rounded-xl border border-slate-200/60">les collectivités</span>
-                <span class="bg-slate-100 px-4 py-2.5 rounded-xl border border-slate-200/60">les organisations
-                    internationales</span>
-                <span class="bg-slate-100 px-4 py-2.5 rounded-xl border border-slate-200/60">et les partenaires
-                    techniques et financiers</span>
+
+            <!-- ÉCRITURES AGRANDIES ICI (text-base font-semibold) -->
+            <div class="flex flex-wrap gap-3 pt-2">
+                <span
+                    class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-base font-semibold border border-slate-200/60">Les
+                    ministères</span>
+                <span
+                    class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-base font-semibold border border-slate-200/60">Les
+                    établissements sanitaires</span>
+                <span
+                    class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-base font-semibold border border-slate-200/60">Les
+                    structures médico-sociales</span>
+                <span
+                    class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-base font-semibold border border-slate-200/60">Les
+                    agences et directions techniques</span>
+                <span
+                    class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-base font-semibold border border-slate-200/60">Les
+                    collectivités</span>
+                <span
+                    class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-base font-semibold border border-slate-200/60">Les
+                    organisations internationales</span>
+                <span
+                    class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-base font-semibold border border-slate-200/60">Et
+                    les partenaires techniques et financiers</span>
             </div>
             <p
                 class="text-slate-700 font-semibold text-base bg-slate-50 p-5 rounded-2xl border border-slate-150 leading-relaxed">
@@ -220,64 +240,93 @@
             </p>
         </section>
 
+        <!-- SECTION BLOCS DES DOMAINES PRIORITAIRES (IMAGE 276a9cbe-0eef-4718-9fc0-f61c427cb0fe) -->
         <section class="space-y-6" data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight border-b border-slate-200 pb-3">
                 Domaines prioritaires d’intervention</h2>
             <div class="grid sm:grid-cols-2 gap-6">
 
+                <!-- Domaine 1 : ÉCRITURES AGRANDIES -->
                 <div class="bg-white p-6 md:p-8 rounded-[1.5rem] border border-slate-200 space-y-4 shadow-2xs">
-                    <h3 class="text-lg font-black text-slate-900 flex items-center gap-2.5 tracking-tight"><i
-                            class="fa-solid fa-landmark text-blue-600 text-base"></i> Gouvernance sanitaire et
-                        médico-sociale</h3>
-                    <div class="flex flex-wrap gap-2 text-xs md:text-sm font-semibold text-slate-600">
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Structuration des organisations</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Appui institutionnel</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Pilotage stratégique</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Accompagnement du changement</span>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 md:p-8 rounded-[1.5rem] border border-slate-200 space-y-4 shadow-2xs">
-                    <h3 class="text-lg font-black text-slate-900 flex items-center gap-2.5 tracking-tight"><i
-                            class="fa-solid fa-shield-heart text-blue-600 text-base"></i> Couverture maladie universelle
+                    <h3 class="text-lg font-black text-slate-900 tracking-tight">Gouvernance sanitaire & médico-sociale
                     </h3>
-                    <div class="flex flex-wrap gap-2 text-xs md:text-sm font-semibold text-slate-600">
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Organisation des dispositifs</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Coordination des parcours</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Renforcement des capacités</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Accès aux soins et inclusion</span>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Structuration
+                            des organisations</span>
+                        <span class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Appui
+                            institutionnel</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Pilotage
+                            stratégique</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Accompagnement
+                            du changement</span>
                     </div>
                 </div>
 
+                <!-- Domaine 2 : ÉCRITURES AGRANDIES -->
                 <div class="bg-white p-6 md:p-8 rounded-[1.5rem] border border-slate-200 space-y-4 shadow-2xs">
-                    <h3 class="text-lg font-black text-slate-900 flex items-center gap-2.5 tracking-tight"><i
-                            class="fa-solid fa-wheelchair text-blue-600 text-base"></i> Handicap et inclusion</h3>
-                    <div class="flex flex-wrap gap-2 text-xs md:text-sm font-semibold text-slate-600">
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Structuration des politiques
-                            handicap</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Inclusion sociale et
-                            médico-sociale</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Professionnalisation des acteurs</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Développement des dispositifs</span>
+                    <h3 class="text-lg font-black text-slate-900 tracking-tight">Couverture maladie universelle</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Organisation
+                            des dispositifs</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Coordination
+                            des parcours</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Renforcement
+                            des capacités</span>
+                        <span class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Accès
+                            aux soins et inclusion</span>
                     </div>
                 </div>
 
+                <!-- Domaine 3 : ÉCRITURES AGRANDIES -->
                 <div class="bg-white p-6 md:p-8 rounded-[1.5rem] border border-slate-200 space-y-4 shadow-2xs">
-                    <h3 class="text-lg font-black text-slate-900 flex items-center gap-2.5 tracking-tight"><i
-                            class="fa-solid fa-users-gear text-blue-600 text-base"></i> Formation et
-                        professionnalisation</h3>
-                    <div class="flex flex-wrap gap-2 text-xs md:text-sm font-semibold text-slate-600">
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Leadership et management</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Gouvernance des organisations</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Culture qualité et performance</span>
-                        <span class="bg-slate-50 px-3 py-1.5 rounded-lg border">Renforcement durable des
-                            compétences</span>
+                    <h3 class="text-lg font-black text-slate-900 tracking-tight">Handicap et inclusion</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Structuration
+                            des politiques handicap</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Inclusion
+                            sociale et médico-sociale</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Professionnalisation
+                            des acteurs</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Développement
+                            des dispositifs</span>
+                    </div>
+                </div>
+
+                <!-- Domaine 4 : ÉCRITURES AGRANDIES -->
+                <div class="bg-white p-6 md:p-8 rounded-[1.5rem] border border-slate-200 space-y-4 shadow-2xs">
+                    <h3 class="text-lg font-black text-slate-900 tracking-tight flex items-center gap-2"><i
+                            class="fa-solid fa-users-gear text-blue-600 text-sm"></i> Formation et professionnalisation
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Leadership
+                            et management</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Gouvernance
+                            des organisations</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Culture
+                            qualité et performance</span>
+                        <span
+                            class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Renforcement
+                            durable des compétences</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- SECTION VISION -->
         <section class="bg-slate-900 text-white p-8 md:p-12 rounded-[2rem] space-y-6" data-aos="zoom-in">
             <div class="space-y-2">
                 <span class="text-xs font-black text-blue-400 tracking-widest uppercase">Pérennité</span>
@@ -311,27 +360,22 @@
 
     </main>
 
+    <!-- PIED DE PAGE -->
     <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
         <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            duration: 800,
-            easing: 'ease-out'
-        });
+        AOS.init({ once: true, duration: 800, easing: 'ease-out' });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
         const menuIcon = document.getElementById('menu-icon');
         const sideMenu = document.getElementById('side-menu');
         const menuOverlay = document.getElementById('menu-overlay');
-        const menuContactBtn = document.getElementById('menu-contact-btn');
 
         function toggleMenu() {
             const isOpen = !sideMenu.classList.contains('translate-x-full');
-
             if (isOpen) {
                 sideMenu.classList.add('translate-x-full');
                 menuOverlay.classList.add('opacity-0');
@@ -351,9 +395,6 @@
 
         menuToggleBtn.addEventListener('click', toggleMenu);
         menuOverlay.addEventListener('click', toggleMenu);
-        if (menuContactBtn) {
-            menuContactBtn.addEventListener('click', toggleMenu);
-        }
     </script>
 </body>
 

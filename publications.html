@@ -47,8 +47,8 @@
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
             <span
-                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2"></span>
-            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3 text-white"><i
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
             <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-building text-sm opacity-50"></i> À propos</a>
@@ -62,13 +62,16 @@
                     class="fa-solid fa-clipboard-list text-sm opacity-50"></i> Interventions</a>
             <a href="afrique-francophone.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
                     class="fa-solid fa-earth-africa text-sm opacity-50"></i> Afrique Francophone</a>
-            <a href="publications.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
-                    class="fa-solid fa-book-open text-sm opacity-50"></i> Publications</a>
+
+            <!-- LIEN ACTIF ICI -->
+            <a href="publications.html"
+                class="text-blue-400 font-black underline decoration-2 underline-offset-4 py-1 flex items-center gap-3 pointer-events-none"><i
+                    class="fa-solid fa-book-open text-sm"></i> Publications</a>
         </div>
 
         <div class="pt-6 border-t border-white/10">
             <a href="index.html#contact" id="menu-contact-btn"
-                class="bg-indigo-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-indigo-700 transition block w-full shadow-lg shadow-indigo-600/20">
+                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full shadow-lg shadow-blue-600/20">
                 <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
             </a>
         </div>
@@ -78,9 +81,9 @@
         class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 hidden opacity-0 transition-opacity duration-300">
     </div>
 
-    <!-- EN-TÊTE HERO -->
+    <!-- HERO -->
     <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down" data-aos-duration="1000">
+        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
             <p class="uppercase tracking-widest text-xs font-black text-blue-400">Insights & Publications</p>
             <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight max-w-5xl">
                 Analyses, réflexions et perspectives sur les enjeux sanitaires et médico-sociaux en Afrique francophone
@@ -98,17 +101,17 @@
         </div>
     </header>
 
-    <!-- CONTENU PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <main class="max-w-7xl mx-auto px-6 py-20 space-y-16">
 
         <div class="space-y-2 border-b border-slate-200 pb-4" data-aos="fade-right">
             <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Publications récentes</h2>
         </div>
 
-        <!-- GRILLE DES ARTICLES -->
+        <!-- LISTE DES ARTICLES -->
         <div class="grid md:grid-cols-2 gap-8">
 
-            <!-- Carte 1 -->
+            <!-- Card 1 -->
             <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
                 data-aos="fade-up">
                 <div class="space-y-4">
@@ -118,36 +121,35 @@
                             stratégique</span>
                         <i class="fa-solid fa-chart-pie text-slate-300 text-xl"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">
-                        Gouvernance sanitaire en Afrique francophone : enjeux et perspectives</h3>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">Gouvernance
+                        sanitaire en Afrique francophone : enjeux et perspectives</h3>
                     <p class="text-base text-slate-600 font-semibold leading-relaxed">
                         Le renforcement de la gouvernance constitue aujourd’hui un levier majeur d’amélioration des
                         systèmes sanitaires en Afrique francophone. Face aux enjeux de coordination, de
                         professionnalisation et d’efficacité organisationnelle, les institutions sont appelées à
-                        développer des approches mais aussi des structures collaboratives davantage orientées vers la
-                        qualité des services et la performance des dispositifs.
+                        développer des approches plus structurées.
                     </p>
                     <div class="pt-2">
                         <h4 class="text-xs uppercase font-black tracking-wider text-slate-900 mb-2">Thématiques abordées
                             :</h4>
-                        <div class="flex flex-wrap gap-2 text-xs md:text-sm font-bold text-slate-600">
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Gouvernance des organisations</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Pilotage stratégique</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Renforcement des capacités</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Structuration institutionnelle</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Conduite du changement</span>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span
+                                class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Gouvernance
+                                des organisations</span>
+                            <span
+                                class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Pilotage
+                                stratégique</span>
                         </div>
                     </div>
                 </div>
                 <div class="pt-4 border-t border-slate-100">
                     <a href="#"
-                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">
-                        Lire l’analyse complète <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">Lire
+                        l’analyse complète <i class="fa-solid fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
 
-            <!-- Carte 2 -->
+            <!-- Card 2 -->
             <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
                 data-aos="fade-up" data-aos-delay="100">
                 <div class="space-y-4">
@@ -162,109 +164,31 @@
                     <p class="text-base text-slate-600 font-semibold leading-relaxed">
                         La mise en œuvre de la couverture maladie universelle représente un enjeu stratégique majeur
                         pour les États engagés dans le développement de systèmes de protection sociale plus inclusifs.
-                        Au-delà du financement, les défis concernent également : l’organisation des dispositifs, la
-                        coordination des acteurs, les parcours de prise en charge et la professionnalisation des
-                        structures.
+                        Au-delà du financement, les défis concernent l’organisation globale.
                     </p>
                     <div class="pt-2">
                         <h4 class="text-xs uppercase font-black tracking-wider text-slate-900 mb-2">Thématiques abordées
                             :</h4>
-                        <div class="flex flex-wrap gap-2 text-xs md:text-sm font-bold text-slate-600">
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Protection sociale</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Coordination sanitaire et sociale</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Gouvernance des dispositifs</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Inclusion et accès aux soins</span>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span
+                                class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Protection
+                                sociale</span>
+                            <span
+                                class="bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-xl text-base font-semibold">Gouvernance
+                                des dispositifs</span>
                         </div>
                     </div>
                 </div>
                 <div class="pt-4 border-t border-slate-100">
                     <a href="#"
-                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">
-                        Lire l’analyse complète <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
-                data-aos="fade-up">
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span
-                            class="text-xs uppercase font-black tracking-wider bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-full">Perspective
-                            médico-sociale</span>
-                        <i class="fa-solid fa-wheelchair text-slate-300 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">Handicap
-                        et inclusion : vers une structuration durable des dispositifs d’accompagnement</h3>
-                    <p class="text-base text-slate-600 font-semibold leading-relaxed">
-                        Les politiques du handicap nécessitent une approche globale associant gouvernance, inclusion,
-                        coordination des acteurs et professionnalisation des dispositifs d’accompagnement.
-                        L’amélioration des parcours des personnes en situation de handicap repose sur une structuration
-                        progressive des organisations et une meilleure articulation entre les secteurs sanitaires.
-                    </p>
-                    <div class="pt-2">
-                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-900 mb-2">Thématiques abordées
-                            :</h4>
-                        <div class="flex flex-wrap gap-2 text-xs md:text-sm font-bold text-slate-600">
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Inclusion sociale</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Structuration médico-sociale</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Professionnalisation des acteurs</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Coordination des dispositifs</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Gouvernance territoriale</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 border-t border-slate-100">
-                    <a href="#"
-                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">
-                        Lire l’analyse complète <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 4 -->
-            <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
-                data-aos="fade-up" data-aos-delay="100">
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span
-                            class="text-xs uppercase font-black tracking-wider bg-amber-50 text-amber-600 px-3 py-1.5 rounded-full">Leadership
-                            & management</span>
-                        <i class="fa-solid fa-users-gear text-slate-300 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">
-                        Professionnalisation des cadres : un enjeu stratégique pour les systèmes sanitaires et sociaux
-                    </h3>
-                    <p class="text-base text-slate-600 font-semibold leading-relaxed">
-                        Le développement durable des systèmes sanitaires et médico-sociaux repose largement sur la
-                        qualité du management, du pilotage stratégique et de la gouvernance des organisations. La
-                        professionnalisation des cadres constitue ainsi un levier essentiel de modernisation,
-                        d’amélioration continue et de performance institutionnelle.
-                    </p>
-                    <div class="pt-2">
-                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-900 mb-2">Thématiques abordées
-                            :</h4>
-                        <div class="flex flex-wrap gap-2 text-xs md:text-sm font-bold text-slate-600">
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Leadership</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Management</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Gouvernance</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Culture qualité</span>
-                            <span class="bg-slate-100 px-3 py-1.5 rounded-xl">Développement des compétences</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 border-t border-slate-100">
-                    <a href="#"
-                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">
-                        Lire l’analyse complète <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">Lire
+                        l’analyse complète <i class="fa-solid fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
 
         </div>
 
-        <!-- SECTION FINALE : STRATÉGIE & EXPERTISE -->
+        <!-- ZONE INFÉRIEURE : COOPÉRATION & TIMELINES (IMAGE 276a9cbe-0eef-4718-9fc0-f61c427cb0fe DANS LE BLOC EXPERTISE) -->
         <section class="grid md:grid-cols-3 gap-12 pt-16 border-t border-slate-200">
 
             <div class="space-y-3 md:col-span-1" data-aos="fade-right">
@@ -280,15 +204,10 @@
                         Partager des analyses stratégiques</li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-blue-600 mt-1 text-sm"></i>
                         Valoriser les dynamiques de réforme</li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-blue-600 mt-1 text-sm"></i>
-                        Contribuer aux réflexions institutionnelles</li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-blue-600 mt-1 text-sm"></i>
-                        Accompagner les acteurs dans leurs transformations</li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-blue-600 mt-1 text-sm"></i>
-                        Promouvoir une approche durable du développement</li>
                 </ul>
             </div>
 
+            <!-- BLOC TECHNIQUE 2 : VALEURS AGRANDIES -->
             <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xs md:col-span-1 space-y-4"
                 data-aos="fade-up">
                 <h3 class="text-lg font-black text-slate-900 flex items-center gap-2.5 tracking-tight"><i
@@ -303,19 +222,10 @@
                             class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Couverture maladie
                         universelle</span>
                     <span class="flex items-center gap-2 border-b border-slate-100 pb-2"><i
-                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Handicap</span>
-                    <span class="flex items-center gap-2 border-b border-slate-100 pb-2"><i
-                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Protection sociale</span>
-                    <span class="flex items-center gap-2 border-b border-slate-100 pb-2"><i
-                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Formation des cadres</span>
-                    <span class="flex items-center gap-2 border-b border-slate-100 pb-2"><i
-                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Qualité et performance</span>
-                    <span class="flex items-center gap-2 border-b border-slate-100 pb-2"><i
-                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Structuration des
-                        organisations</span>
+                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Handicap et inclusion</span>
                     <span class="flex items-center gap-2"><i
-                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Coopération
-                        institutionnelle</span>
+                            class="fa-solid fa-angle-right text-[10px] text-blue-500"></i> Formation et
+                        professionnalisation</span>
                 </div>
             </div>
 
@@ -330,43 +240,28 @@
                     <p class="flex items-start gap-2.5 bg-white/5 p-3 rounded-xl border border-white/5"><i
                             class="fa-solid fa-hourglass-half text-xs text-blue-400 mt-1.5"></i> Structuration du
                         médico-social en Afrique</p>
-                    <p class="flex items-start gap-2.5 bg-white/5 p-3 rounded-xl border border-white/5"><i
-                            class="fa-solid fa-hourglass-half text-xs text-blue-400 mt-1.5"></i> Coordination des
-                        parcours de prise en charge</p>
-                    <p class="flex items-start gap-2.5 bg-white/5 p-3 rounded-xl border border-white/5"><i
-                            class="fa-solid fa-hourglass-half text-xs text-blue-400 mt-1.5"></i> Inclusion et politiques
-                        publiques du handicap</p>
-                    <p class="flex items-start gap-2.5 bg-white/5 p-3 rounded-xl border border-white/5"><i
-                            class="fa-solid fa-hourglass-half text-xs text-blue-400 mt-1.5"></i> Leadership et
-                        modernisation sanitaire</p>
                 </div>
             </div>
 
         </section>
     </main>
 
-    <!-- PIED DE PAGE -->
+    <!-- FOOTER -->
     <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
         <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            duration: 800,
-            easing: 'ease-out'
-        });
+        AOS.init({ once: true, duration: 800, easing: 'ease-out' });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
         const menuIcon = document.getElementById('menu-icon');
         const sideMenu = document.getElementById('side-menu');
         const menuOverlay = document.getElementById('menu-overlay');
-        const menuContactBtn = document.getElementById('menu-contact-btn');
 
         function toggleMenu() {
             const isOpen = !sideMenu.classList.contains('translate-x-full');
-
             if (isOpen) {
                 sideMenu.classList.add('translate-x-full');
                 menuOverlay.classList.add('opacity-0');
@@ -386,9 +281,6 @@
 
         menuToggleBtn.addEventListener('click', toggleMenu);
         menuOverlay.addEventListener('click', toggleMenu);
-        if (menuContactBtn) {
-            menuContactBtn.addEventListener('click', toggleMenu);
-        }
     </script>
 </body>
 
