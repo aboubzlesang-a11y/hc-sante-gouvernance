@@ -21,6 +21,14 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* CORRECTION TOUCH-ACTION : Supprime le délai de latence de 300ms au clic sur mobile */
+        #menu-toggle-btn,
+        #side-menu a,
+        #menu-overlay {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
     </style>
 </head>
 
@@ -41,7 +49,7 @@
         </div>
     </nav>
 
-    <!-- MENU LATÉRAL MODIFIÉ AVEC LIEN ACTIF SOULIGNÉ EN BLEU -->
+    <!-- MENU LATÉRAL -->
     <div id="side-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-40 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
         <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
@@ -95,7 +103,7 @@
             </h1>
             <p class="text-slate-300 text-base md:text-xl font-medium max-w-3xl leading-relaxed">
                 HC Santé & Gouvernance apporte une expertise de pointe aux institutions, ministères et acteurs de
-                terrain pour concevoir et déployer des politiques publiques et des systèmes plus inclusifs, performants
+                terrain pour concevoir et déployer des politiques publiques et des systèmes mais inclusifs, performants
                 et durables.
             </p>
             <div class="pt-4 flex flex-wrap gap-4">
@@ -173,7 +181,7 @@
                 <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">HC Santé & Gouvernance</h2>
                 <p class="text-slate-600 font-semibold text-sm md:text-base leading-relaxed">
                     Nous croyons que le développement durable des systèmes sanitaires passe par le renforcement des
-                    capacités managériales et la structuration rigoureuse des institutions. Notre équipe co-construit
+                    capacités managériales et la structuration rigoureuse des institutions. Notre équipe co-conruit
                     des solutions réglementaires, techniques et opérationnelles adaptées.
                 </p>
             </div>
@@ -227,6 +235,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialisation de AOS après la configuration de l'interactivité essentielle
         AOS.init({ once: true });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
@@ -235,7 +244,9 @@
         const menuOverlay = document.getElementById('menu-overlay');
         const menuContactBtn = document.getElementById('menu-contact-btn');
 
-        function toggleMenu() {
+        function toggleMenu(e) {
+            if (e) e.preventDefault(); // Évite les comportements parasites sur écran tactile
+
             const isOpen = !sideMenu.classList.contains('translate-x-full');
 
             if (isOpen) {
@@ -255,8 +266,14 @@
             }
         }
 
+        // Écoute double (touchstart + click) pour éliminer toute latence mobile
+        menuToggleBtn.addEventListener('touchstart', toggleMenu, { passive: false });
         menuToggleBtn.addEventListener('click', toggleMenu);
+
+        menuOverlay.addEventListener('touchstart', toggleMenu, { passive: false });
         menuOverlay.addEventListener('click', toggleMenu);
+
+        menuContactBtn.addEventListener('touchstart', toggleMenu, { passive: false });
         menuContactBtn.addEventListener('click', toggleMenu);
     </script>
 </body>
