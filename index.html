@@ -276,14 +276,7 @@
         menuContactBtn.addEventListener('touchstart', toggleMenu, { passive: false });
         menuContactBtn.addEventListener('click', toggleMenu);
     </script>
-    <script>
-        // Ajout d'une protection contre le chargement différé
-        window.addEventListener('load', () => {
-            const sideMenu = document.getElementById('side-menu');
-            // On s'assure que le menu est bien positionné hors écran dès le début
-            sideMenu.style.display = 'flex';
-        });
-    </script>
+
 </body>
 
 </html>
