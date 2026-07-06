@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offre de Formation | HC Santé & Gouvernance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=500;600;700;800;900&family=Inter:wght=400;500;600;700&display=swap');
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 min-h-screen pt-20 overflow-x-hidden">
+
+    <nav
+        class="fixed top-0 inset-x-0 z-50 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 px-6 h-20 text-white flex items-center">
+        <div class="max-w-7xl mx-auto flex justify-between items-center w-full h-full relative">
+            <a href="index.html"
+                class="flex items-center gap-3 hover:opacity-90 transition shrink-0 max-w-[70%] sm:max-w-none">
+                <img src="logo.png.png" alt="HC" class="h-10 w-auto sm:h-12 object-contain bg-transparent">
+                <span
+                    class="text-base sm:text-xl font-black tracking-tight truncate sm:overflow-visible whitespace-nowrap">
+                    Santé & Gouvernance
+                </span>
+            </a>
+
+            <button id="menu-toggle-btn"
+                class="text-white focus:outline-none text-2xl p-2 cursor-pointer hover:text-blue-400 transition flex items-center gap-2 shrink-0 touch-manipulation">
+                <span class="text-xs font-bold uppercase tracking-wider hidden sm:inline">Menu</span>
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="side-menu"
+        class="fixed top-0 right-0 h-full w-full sm:w-80 bg-slate-950/98 backdrop-blur-2xl z-50 border-l border-white/10 p-8 pt-32 translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl">
+        <div class="flex flex-col space-y-4 text-lg font-bold text-slate-200">
+            <span
+                class="text-xs font-black uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2 mb-2">Navigation</span>
+            <a href="index.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-house text-sm opacity-50"></i> Accueil</a>
+            <a href="apropos.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-building text-sm opacity-50"></i> À propos</a>
+            <a href="expertises.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-cubes text-sm opacity-50"></i> Pôles d'Expertise</a>
+            <a href="approche.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-route text-sm opacity-50"></i> Notre Approche</a>
+            <a href="publics.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-users text-sm opacity-50"></i> Publics</a>
+            <a href="interventions.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-clipboard-list text-sm opacity-50"></i> Interventions</a>
+            <a href="afrique-francophone.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-earth-africa text-sm opacity-50"></i> Afrique Francophone</a>
+            <a href="publications.html" class="hover:text-blue-400 transition py-1 flex items-center gap-3"><i
+                    class="fa-solid fa-book-open text-sm opacity-50"></i> Publications</a>
+            <a href="formation.html"
+                class="text-blue-400 font-black underline decoration-2 underline-offset-4 py-1 flex items-center gap-3 pointer-events-none">
+                <i class="fa-solid fa-graduation-cap text-sm"></i>Formation
+            </a>
+        </div>
+
+        <div class="pt-6 border-t border-white/10">
+            <a href="index.html#contact" id="menu-contact-btn"
+                class="bg-blue-600 text-white text-center font-bold px-5 py-3 rounded-xl hover:bg-blue-700 transition block w-full shadow-lg shadow-blue-600/20">
+                <i class="fa-solid fa-envelope mr-2"></i> Contactez-nous
+            </a>
+        </div>
+    </div>
+
+    <div id="menu-overlay"
+        class="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-40 hidden opacity-0 transition-opacity duration-300">
+    </div>
+
+    <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto space-y-4" data-aos="fade-down">
+            <p class="uppercase tracking-widest text-xs font-black text-blue-400">Développement des compétences</p>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight max-w-5xl">
+                Programmes de formation et professionnalisation des acteurs de la santé
+            </h1>
+            <p class="text-slate-300 text-base md:text-xl font-medium max-w-4xl leading-relaxed pt-2">
+                HC Santé & Gouvernance propose des parcours d'excellence conçus pour renforcer les compétences
+                managériales, techniques et stratégiques des cadres, décideurs et professionnels des systèmes de santé.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-20 space-y-16">
+
+        <div class="space-y-2 border-b border-slate-200 pb-4" data-aos="fade-right">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Notre catalogue de formations</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+
+            <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
+                data-aos="fade-up">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <span
+                            class="text-xs uppercase font-black tracking-wider bg-blue-50 text-blue-600 px-3 py-1.5 rounded-full">Santé
+                            Publique</span>
+                        <i class="fa-solid fa-heart-pulse text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">
+                        PROMOTION DE LA SANTÉ DES POPULATIONS : MODALITÉS ET STRATÉGIES D'ACTIONS
+                    </h3>
+
+                    <div class="space-y-2">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-400 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-blue-500"></i> Objectifs Professionnels :
+                        </h4>
+                        <ul class="text-sm text-slate-600 font-semibold space-y-2 pl-1">
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i> Se
+                                familiariser avec les principes fondamentaux, approches et théories de la prévention et
+                                de la promotion de la santé des populations</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Acquérir les connaissances et compétences de base nécessaires à la planification, la
+                                mise en œuvre et l'évaluation des stratégies de prévention et de promotion de la santé
+                            </li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Développer ses réseaux professionnels dans le champ de la santé des populations</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-4 space-y-2.5">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-500 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group"></i> Modules de formation :
+                        </h4>
+                        <div class="text-xs font-bold text-slate-700 space-y-2">
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-blue-500">M1</span> Concepts fondamentaux en santé publique, prévention,
+                                promotion de la santé</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-blue-500">M2</span> Inégalités sociales de santé (ISS) et déterminants
+                                de la santé</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-blue-500">M3</span> Les stratégies d'action en promotion de la santé
+                                d'hier à aujourd'hui</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-blue-500">M4</span> Données probantes, transférabilité, efficacité des
+                                interventions</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-blue-500">M5</span> Introduction à la planification de projets en
+                                promotion de la santé</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">S'inscrire
+                        à cette session <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <span
+                            class="text-xs uppercase font-black tracking-wider bg-purple-50 text-purple-600 px-3 py-1.5 rounded-full">Aménagement
+                            & Urbanisme</span>
+                        <i class="fa-solid fa-city text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">
+                        SANTÉ PUBLIQUE ET AMÉNAGEMENT DES TERRITOIRES (SPAT) VERS UN URBANISME FAVORABLE À LA SANTÉ
+                        (UFS)
+                    </h3>
+
+                    <div class="space-y-2">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-400 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-purple-500"></i> Objectifs Professionnels :
+                        </h4>
+                        <ul class="text-sm text-slate-600 font-semibold space-y-2 pl-1">
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i> À
+                                l'issue de la formation, le participant sera doté de compétences spécifiques lui
+                                permettant d'analyser, de coordonner, de piloter ou de développer des projets
+                                d'urbanisme et d'aménagement favorables à la santé pour répondre simultanément aux
+                                grands enjeux de santé publique et environnementaux.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-4 space-y-2.5">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-500 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group"></i> Modules de formation :
+                        </h4>
+                        <div class="text-xs font-bold text-slate-700 space-y-2">
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-purple-500">M1</span> Introduction générale à l'Urbanisme Favorable à la
+                                Santé (UFS)</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-purple-500">M2</span> Les déterminants de santé environnementaux et les
+                                inégalités environnementales de santé</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-purple-500">M3</span> Les leviers d'action opérationnels de l'UFS et
+                                fiches d'analyse d'opérations</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-purple-500">M4</span> L'Évaluation d'Impact sur la Santé (EIS) : un
+                                outil d'aide à la décision pour l'UFS</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-purple-500">M5</span> Co-construction d'une démarche d'UFS et d'une
+                                démarche d'EIS transposable au contexte professionnel des stagiaires</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">S'inscrire
+                        à cette session <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
+                data-aos="fade-up">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <span
+                            class="text-xs uppercase font-black tracking-wider bg-amber-50 text-amber-600 px-3 py-1.5 rounded-full">Data
+                            Science & Tech</span>
+                        <i class="fa-solid fa-code text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">
+                        CYCLE PYTHON POUR L'ANALYSE DES DONNÉES DE SANTÉ ET LA DATA SCIENCE
+                    </h3>
+
+                    <div class="space-y-2">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-400 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-amber-500"></i> Objectifs Professionnels :
+                        </h4>
+                        <ul class="text-sm text-slate-600 font-semibold space-y-2 pl-1">
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Connaître les fonctionnalités du langage Python et l'outil Anaconda</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i> Savoir
+                                effectuer des traitements sur les données de santé plus rapidement et plus efficacement
+                                via Python</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Acquérir les compétences sur la thématique spécifique : la data science et le machine
+                                learning avec Python</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Appliquer et paramétrer ces méthodes sur les données de santé</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-4 space-y-2.5">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-500 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group"></i> Modules de formation :
+                        </h4>
+                        <div class="text-xs font-bold text-slate-700 space-y-2">
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-amber-600">M1</span> Prise en main de l'environnement Python & bases
+                                algorithmiques</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-amber-600">M2</span> Manipulation de structures de données (Pandas /
+                                NumPy)</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-amber-600">M3</span> Nettoyage, préparation et pré-traitement des bases
+                                de données médico-administratives</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-amber-600">M4</span> Visualisation avancée de données de santé
+                                (Matplotlib / Seaborn)</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-amber-600">M5</span> Initiation à la modélisation statistique et
+                                algorithmes prédictifs (Scikit-Learn)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">S'inscrire
+                        à cette session <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col justify-between space-y-6"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <span
+                            class="text-xs uppercase font-black tracking-wider bg-rose-50 text-rose-600 px-3 py-1.5 rounded-full">Gestion
+                            Hospitalière</span>
+                        <i class="fa-solid fa-calculator text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-snug">
+                        D.E. MANAGEMENT BUDGÉTAIRE ET FINANCIER DES ÉTABLISSEMENTS DE SANTÉ
+                    </h3>
+
+                    <div class="space-y-2">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-400 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-rose-500"></i> Objectifs Professionnels :
+                        </h4>
+                        <ul class="text-sm text-slate-600 font-semibold space-y-2 pl-1">
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Formuler une analysis financière d'un établissement public de santé</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Identifier les mécanismes de facturation, organiser et mettre en œuvre une politique
+                                d'optimisation des produits hospitaliers</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs shrink-0"></i>
+                                Élaborer l'E.P.R.D. et mettre en place un pilotage budgétaire efficient</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-4 space-y-2.5">
+                        <h4 class="text-xs uppercase font-black tracking-wider text-slate-500 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group"></i> Modules de formation :
+                        </h4>
+                        <div class="text-xs font-bold text-slate-700 space-y-2">
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-rose-600">M1</span> L'environnement financier, budgétaire et comptable
+                                de l'établissement public de santé</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-rose-600">M2</span> L'analyse financière de l'établissement public de
+                                santé</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-rose-600">M3</span> La gestion budgétaire, l'EPRD et son exécution</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-rose-600">M4</span> La stratégie de financement, la gestion de la
+                                trésorerie et le choix d'investissement</div>
+                            <div class="p-2 bg-white rounded-lg border border-slate-100 flex gap-2"><span
+                                    class="text-rose-600">M5</span> Le contrôle de gestion et la comptabilité analytique
+                                hospitalière</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-base font-black text-blue-600 hover:text-blue-700 transition">S'inscrire
+                        à cette session <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-950 text-slate-500 text-xs py-8 text-center border-t border-white/5">
+        <p>&copy; 2026 HC Santé & Gouvernance. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800, easing: 'ease-out' });
+
+        const menuToggleBtn = document.getElementById('menu-toggle-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const sideMenu = document.getElementById('side-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        function toggleMenu() {
+            const isOpen = !sideMenu.classList.contains('translate-x-full');
+            if (isOpen) {
+                sideMenu.classList.add('translate-x-full');
+                menuOverlay.classList.add('opacity-0');
+                setTimeout(() => menuOverlay.classList.add('hidden'), 300);
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            } else {
+                menuOverlay.classList.remove('hidden');
+                setTimeout(() => menuOverlay.classList.remove('opacity-0'), 10);
+                sideMenu.classList.remove('translate-x-full');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        menuToggleBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>
