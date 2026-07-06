@@ -206,25 +206,35 @@
                     formation ? Laissez-nous vos coordonnées.</p>
             </div>
 
-            <form action="https://formspree.io/f/maqkaegp" method="POST" class="grid sm:grid-cols-2 gap-4 text-sm">
+            <form id="contact-form" action="https://formspree.io/f/maqkaegp" method="POST"
+                class="grid sm:grid-cols-2 gap-4 text-sm">
 
                 <input type="text" name="name" required placeholder="Votre nom complet"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
 
-                <input type="email" name="_replyto" required placeholder="Adresse email"
+                <input type="email" name="_replyto" required placeholder="Adresse email professionnelle"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
 
                 <input type="text" name="company" placeholder="Organisation ou Institution"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
 
-                <textarea name="message" required placeholder="Décrivez vos besoin..." rows="4"
+                <textarea name="message" required placeholder="Décrivez succinctement votre besoin stratégique..."
+                    rows="4"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium"></textarea>
 
-                <button type="submit"
-                    class="bg-blue-600 text-white font-bold p-4 rounded-xl sm:col-span-2 hover:bg-blue-700 transition cursor-pointer">
-                    Envoyer
+                <button type="submit" id="contact-submit-btn"
+                    class="bg-blue-600 text-white font-bold p-4 rounded-xl sm:col-span-2 hover:bg-blue-700 transition cursor-pointer flex items-center justify-center gap-2">
+                    <span>Envoyer</span>
                 </button>
             </form>
+
+            <div id="contact-success-message"
+                class="hidden bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-6 text-center space-y-2">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-3xl"></i>
+                <h3 class="text-lg font-bold text-white">Message envoyé avec succès !</h3>
+                <p class="text-slate-300 text-sm max-w-md mx-auto">Merci pour votre intérêt. L'équipe de HC Santé &
+                    Gouvernance analyse vos spécifications et reviendra vers vous sous 24h.</p>
+            </div>
         </section>
 
     </main>
@@ -275,6 +285,60 @@
 
         menuContactBtn.addEventListener('touchstart', toggleMenu, { passive: false });
         menuContactBtn.addEventListener('click', toggleMenu);
+
+        // Gestion de la soumission AJAX pour Formspree sans rechargement de page
+        const contactForm = document.getElementById('contact-form');
+        const contactSubmitBtn = document.getElementById('contact-submit-btn');
+        const contactSuccessMessage = document.getElementById('contact-success-message');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Bloque la redirection vers Formspree
+
+                // Changement de l'état du bouton pendant l'envoi
+                contactSubmitBtn.disabled = true;
+                contactSubmitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> <span>Envoi en cours...</span>`;
+
+                // Collecte des données du formulaire
+                const formData = new FormData(contactForm);
+
+                // Envoi des données en tâche de fond
+                fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Masquer le formulaire et afficher le message de confirmation
+                            contactForm.classList.add('hidden');
+                            contactSuccessMessage.classList.remove('hidden');
+                        } else {
+                            // En cas d'erreur de réponse de Formspree
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    alert(data["errors"].map(error => error["message"]).join(", "));
+                                } else {
+                                    alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+                                }
+                            });
+                            resetContactButton();
+                        }
+                    })
+                    .catch(error => {
+                        // En cas d'erreur réseau
+                        alert("Erreur réseau. Impossible de joindre le serveur de messagerie.");
+                        resetContactButton();
+                    });
+            });
+        }
+
+        function resetContactButton() {
+            contactSubmitBtn.disabled = false;
+            contactSubmitBtn.innerHTML = `<span>Envoyer</span>`;
+        }
     </script>
 
 </body>
