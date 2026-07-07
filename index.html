@@ -34,6 +34,18 @@
         #contact {
             scroll-margin-top: 100px;
         }
+
+        /* Style personnalisé pour le sélecteur afin de forcer une flèche propre sur tous les navigateurs mobiles */
+        .custom-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.25rem;
+            padding-right: 2.5rem;
+        }
     </style>
 </head>
 
@@ -205,47 +217,52 @@
             </div>
         </section>
 
-        <section id="contact" class="bg-slate-900 text-white p-8 md:p-12 rounded-[2.5rem] space-y-8" data-aos="zoom-in">
+        <!-- ZONE DE CONTACT ADAPTÉE À TOUS LES ÉCRANS -->
+        <section id="contact" class="bg-slate-900 text-white p-6 md:p-12 rounded-[2rem] md:rounded-[2.5rem] space-y-8"
+            data-aos="zoom-in">
             <div class="space-y-2 max-w-2xl">
                 <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Échangeons ensemble</span>
                 <h2 class="text-2xl md:text-3xl font-black tracking-tight">Démarrer une collaboration</h2>
-                <p class="text-slate-300 font-medium text-sm">Vous portez un projet de réforme, de restructuration ou de
-                    formation ? Laissez-nous vos coordonnées.</p>
+                <p class="text-slate-300 font-medium text-sm md:text-base">Vous portez un projet de réforme, de
+                    restructuration ou de formation ? Laissez-nous vos coordonnées.</p>
             </div>
 
+            <!-- Grille fluide : 1 colonne sur mobile, 2 colonnes dès md (tablettes/ordinateurs) -->
             <form id="contact-form" action="https://formspree.io/f/mojobqeq" method="POST"
-                class="grid sm:grid-cols-2 gap-4 text-sm">
+                class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
 
                 <input type="text" name="name" required placeholder="Votre nom complet"
-                    class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
+                    class="w-full bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium text-base md:text-sm">
 
                 <input type="email" name="_replyto" required placeholder="Adresse email professionnelle"
-                    class="bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
+                    class="w-full bg-white/5 border border-white/10 rounded-xl p-3.5 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium text-base md:text-sm">
 
                 <input type="text" name="company" placeholder="Organisation ou Institution"
-                    class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
+                    class="w-full bg-white/5 border border-white/10 rounded-xl p-3.5 md:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium text-base md:text-sm">
 
-                <!-- SÉLECTEUR DE SÉLECTION DE FORMATION -->
-                <select name="formation" id="formation-select"
-                    class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-slate-300 focus:outline-none focus:border-blue-500 font-medium appearance-none cursor-pointer">
-                    <option value="" class="bg-slate-900 text-white">Sujet de votre message / Choix de la formation
-                    </option>
-                    <option value="promotion-sante" class="bg-slate-900 text-white">Promotion de la santé des
-                        populations : modalités et stratégies d'actions</option>
-                    <option value="urbanisme-sante" class="bg-slate-900 text-white">Santé publique et aménagement des
-                        territoires (SPAT) vers un urbanisme favorable à la santé(UFS)</option>
-                    <option value="python-data-science" class="bg-slate-900 text-white"> Python pour l'analysedes
-                        données de santé et la Data science</option>
-                    <option value="management-budgetaire" class="bg-slate-900 text-white">Management budgétaire et
-                        financier des établissement de santé</option>
-                </select>
+                <!-- SÉLECTEUR DE FORMATION OPTIMISÉ POUR SMARTPHONES (Sans débordement textuel) -->
+                <div class="w-full md:col-span-2 relative">
+                    <select name="formation" id="formation-select"
+                        class="custom-select w-full bg-white/5 border border-white/10 rounded-xl p-3.5 text-slate-300 focus:outline-none focus:border-blue-500 font-medium text-base md:text-sm cursor-pointer whitespace-normal break-words">
+                        <option value="" class="bg-slate-900 text-white">Sujet de votre message / Choix de la formation
+                        </option>
+                        <option value="promotion-sante" class="bg-slate-900 text-white">Promotion de la santé des
+                            populations : modalités et stratégies d'actions</option>
+                        <option value="urbanisme-sante" class="bg-slate-900 text-white">Santé publique et aménagement
+                            des territoires (SPAT) vers un urbanisme favorable à la santé(UFS)</option>
+                        <option value="python-data-science" class="bg-slate-900 text-white">Python pour l'analyse des
+                            données de santé et la Data science</option>
+                        <option value="management-budgetaire" class="bg-slate-900 text-white">Management budgétaire et
+                            financier des établissements de santé</option>
+                    </select>
+                </div>
 
                 <textarea name="message" required placeholder="Décrivez succinctement votre besoin stratégique..."
                     rows="4"
-                    class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium"></textarea>
+                    class="w-full bg-white/5 border border-white/10 rounded-xl p-3.5 md:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium text-base md:text-sm"></textarea>
 
                 <button type="submit" id="contact-submit-btn"
-                    class="bg-blue-600 text-white font-bold p-4 rounded-xl sm:col-span-2 hover:bg-blue-700 transition cursor-pointer flex items-center justify-center gap-2">
+                    class="w-full bg-blue-600 text-white font-bold p-4 rounded-xl md:col-span-2 hover:bg-blue-700 transition cursor-pointer flex items-center justify-center gap-2 text-base">
                     <span>Envoyer</span>
                 </button>
             </form>
