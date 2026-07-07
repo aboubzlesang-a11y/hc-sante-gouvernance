@@ -29,6 +29,11 @@
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
         }
+
+        /* Ajustement de la zone d'ancrage du formulaire sous le menu fixe */
+        #contact {
+            scroll-margin-top: 100px;
+        }
     </style>
 </head>
 
@@ -220,6 +225,21 @@
                 <input type="text" name="company" placeholder="Organisation ou Institution"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium">
 
+                <!-- SÉLECTEUR DE SÉLECTION DE FORMATION -->
+                <select name="formation" id="formation-select"
+                    class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-slate-300 focus:outline-none focus:border-blue-500 font-medium appearance-none cursor-pointer">
+                    <option value="" class="bg-slate-900 text-white">Sujet de votre message / Choix de la formation
+                    </option>
+                    <option value="promotion-sante" class="bg-slate-900 text-white">Promotion de la santé des
+                        populations : modalités et stratégies d'actions</option>
+                    <option value="urbanisme-sante" class="bg-slate-900 text-white">Santé publique et aménagement des
+                        territoires (SPAT) vers un urbanisme favorable à la santé(UFS)</option>
+                    <option value="python-data-science" class="bg-slate-900 text-white"> Python pour l'analysedes
+                        données de santé et la Data science</option>
+                    <option value="management-budgetaire" class="bg-slate-900 text-white">Management budgétaire et
+                        financier des établissement de santé</option>
+                </select>
+
                 <textarea name="message" required placeholder="Décrivez succinctement votre besoin stratégique..."
                     rows="4"
                     class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:col-span-2 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 font-medium"></textarea>
@@ -247,7 +267,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialisation de AOS après la configuration de l'interactivité essentielle
         AOS.init({ once: true });
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
@@ -257,7 +276,7 @@
         const menuContactBtn = document.getElementById('menu-contact-btn');
 
         function toggleMenu(e) {
-            if (e) e.preventDefault(); // Évite les comportements parasites sur écran tactile
+            if (e) e.preventDefault();
 
             const isOpen = !sideMenu.classList.contains('translate-x-full');
 
@@ -278,7 +297,6 @@
             }
         }
 
-        // Écoute double (touchstart + click) pour éliminer toute latence mobile
         menuToggleBtn.addEventListener('touchstart', toggleMenu, { passive: false });
         menuToggleBtn.addEventListener('click', toggleMenu);
 
@@ -288,23 +306,46 @@
         menuContactBtn.addEventListener('touchstart', toggleMenu, { passive: false });
         menuContactBtn.addEventListener('click', toggleMenu);
 
-        // Gestion de la soumission AJAX pour Formspree sans rechargement de page
+        // SCRIPT DE SYNCRONISATION ET DE DEFILEMENT DIRECT VERS LE BAS
+        function checkUrlForFormation() {
+            const searchParams = new URLSearchParams(window.location.search);
+            const formationValue = searchParams.get('formation');
+
+            if (formationValue) {
+                const selectElement = document.getElementById('formation-select');
+                const contactSection = document.getElementById('contact');
+
+                if (selectElement) {
+                    selectElement.value = formationValue;
+                }
+
+                if (contactSection) {
+                    setTimeout(() => {
+                        contactSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 400);
+                }
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', checkUrlForFormation);
+        window.addEventListener('hashchange', checkUrlForFormation);
+
         const contactForm = document.getElementById('contact-form');
         const contactSubmitBtn = document.getElementById('contact-submit-btn');
         const contactSuccessMessage = document.getElementById('contact-success-message');
 
         if (contactForm) {
             contactForm.addEventListener('submit', function (e) {
-                e.preventDefault(); // Bloque la redirection vers Formspree
+                e.preventDefault();
 
-                // Changement de l'état du bouton pendant l'envoi
                 contactSubmitBtn.disabled = true;
                 contactSubmitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> <span>Envoi en cours...</span>`;
 
-                // Collecte des données du formulaire
                 const formData = new FormData(contactForm);
 
-                // Envoi des données en tâche de fond
                 fetch(contactForm.action, {
                     method: contactForm.method,
                     body: formData,
@@ -314,11 +355,9 @@
                 })
                     .then(response => {
                         if (response.ok) {
-                            // Masquer le formulaire et afficher le message de confirmation
                             contactForm.classList.add('hidden');
                             contactSuccessMessage.classList.remove('hidden');
                         } else {
-                            // En cas d'erreur de réponse de Formspree
                             response.json().then(data => {
                                 if (Object.hasOwn(data, 'errors')) {
                                     alert(data["errors"].map(error => error["message"]).join(", "));
@@ -330,7 +369,6 @@
                         }
                     })
                     .catch(error => {
-                        // En cas d'erreur réseau
                         alert("Erreur réseau. Impossible de joindre le serveur de messagerie.");
                         resetContactButton();
                     });
